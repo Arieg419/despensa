@@ -1,0 +1,14 @@
+{
+  "name": "smittenkitchendata",
+  "version": "1.0.0",
+  "description": "\"Scraping the smitten kitchen website for recipe data\"",
+  "main": "index.js",
+  "author": "\"Omer G\"",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "express": "^4.15.2",
+    "fs": "^0.0.1-security",
+    "request": "^2.81.0"
+  }
+}

@@ -1,0 +1,874 @@
+[
+    {
+        "General": [
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/appetizers-party-snacks/?format=list",
+                "subCategoryTitle": "Appetizers + Party Snacks",
+                "subCategoryCount": "72"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/austrian/?format=list",
+                "subCategoryTitle": "Austrian",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/beans/?format=list",
+                "subCategoryTitle": "Beans",
+                "subCategoryCount": "54"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/beef/?format=list",
+                "subCategoryTitle": "Beef",
+                "subCategoryCount": "5"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/bourbon/?format=list",
+                "subCategoryTitle": "Bourbon",
+                "subCategoryCount": "12"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/brazilian/?format=list",
+                "subCategoryTitle": "Brazilian",
+                "subCategoryCount": "1"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/bread/?format=list",
+                "subCategoryTitle": "Bread",
+                "subCategoryCount": "41"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/breakfast/?format=list",
+                "subCategoryTitle": "Breakfast",
+                "subCategoryCount": "121"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/british/?format=list",
+                "subCategoryTitle": "British",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/brown-butter/?format=list",
+                "subCategoryTitle": "Brown Butter",
+                "subCategoryCount": "17"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/brunch/?format=list",
+                "subCategoryTitle": "Brunch",
+                "subCategoryCount": "92"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/budget/?format=list",
+                "subCategoryTitle": "Budget",
+                "subCategoryCount": "49"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/casserole/?format=list",
+                "subCategoryTitle": "Casserole",
+                "subCategoryCount": "18"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/cheese/?format=list",
+                "subCategoryTitle": "Cheese",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/chicken/?format=list",
+                "subCategoryTitle": "Chicken",
+                "subCategoryCount": "32"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/chinese/?format=list",
+                "subCategoryTitle": "Chinese",
+                "subCategoryCount": "9"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/christmas/?format=list",
+                "subCategoryTitle": "Christmas",
+                "subCategoryCount": "10"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/citrus/?format=list",
+                "subCategoryTitle": "Citrus",
+                "subCategoryCount": "50"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/coconut/?format=list",
+                "subCategoryTitle": "Coconut",
+                "subCategoryCount": "23"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/cookbook/?format=list",
+                "subCategoryTitle": "Cookbook",
+                "subCategoryCount": "4"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/dairy-free/?format=list",
+                "subCategoryTitle": "Dairy-Free",
+                "subCategoryCount": "7"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/date-night/?format=list",
+                "subCategoryTitle": "Date Night",
+                "subCategoryCount": "23"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/disasters/?format=list",
+                "subCategoryTitle": "Disasters",
+                "subCategoryCount": "12"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/drinks/?format=list",
+                "subCategoryTitle": "Drinks",
+                "subCategoryCount": "29"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/dumplings/?format=list",
+                "subCategoryTitle": "Dumplings",
+                "subCategoryCount": "7"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/easter/?format=list",
+                "subCategoryTitle": "Easter",
+                "subCategoryCount": "23"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/eggs/?format=list",
+                "subCategoryTitle": "Eggs",
+                "subCategoryCount": "37"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/elsewhere/?format=list",
+                "subCategoryTitle": "Elsewhere",
+                "subCategoryCount": "14"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/english/?format=list",
+                "subCategoryTitle": "English",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fall/?format=list",
+                "subCategoryTitle": "Fall",
+                "subCategoryCount": "86"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/freezer-friendly/?format=list",
+                "subCategoryTitle": "Freezer Friendly",
+                "subCategoryCount": "40"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/french/?format=list",
+                "subCategoryTitle": "French",
+                "subCategoryCount": "23"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/german/?format=list",
+                "subCategoryTitle": "German",
+                "subCategoryCount": "4"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/gluten-free/?format=list",
+                "subCategoryTitle": "Gluten-Free",
+                "subCategoryCount": "83"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/grain/?format=list",
+                "subCategoryTitle": "Grain/Rice",
+                "subCategoryCount": "24"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/greek/?format=list",
+                "subCategoryTitle": "Greek",
+                "subCategoryCount": "4"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/grilling/?format=list",
+                "subCategoryTitle": "Grilling",
+                "subCategoryCount": "24"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/guest-post/?format=list",
+                "subCategoryTitle": "Guest Post",
+                "subCategoryCount": "5"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/hanukah/?format=list",
+                "subCategoryTitle": "Hanukah",
+                "subCategoryCount": "8"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/indian/?format=list",
+                "subCategoryTitle": "Indian",
+                "subCategoryCount": "10"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/israeli/?format=list",
+                "subCategoryTitle": "Israeli",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/italian/?format=list",
+                "subCategoryTitle": "Italian",
+                "subCategoryCount": "55"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/japanese/?format=list",
+                "subCategoryTitle": "Japanese",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/jewish/?format=list",
+                "subCategoryTitle": "Jewish",
+                "subCategoryCount": "28"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/lamb/?format=list",
+                "subCategoryTitle": "Lamb",
+                "subCategoryCount": "1"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/lunch/?format=list",
+                "subCategoryTitle": "Lunch",
+                "subCategoryCount": "28"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/meat/?format=list",
+                "subCategoryTitle": "Meat",
+                "subCategoryCount": "49"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/middle-eastern/?format=list",
+                "subCategoryTitle": "Middle Eastern",
+                "subCategoryCount": "6"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/muffin/?format=list",
+                "subCategoryTitle": "Muffin/Quick Bread",
+                "subCategoryCount": "25"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/north-african/?format=list",
+                "subCategoryTitle": "North African",
+                "subCategoryCount": "6"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/pancakes/?format=list",
+                "subCategoryTitle": "Pancakes",
+                "subCategoryCount": "33"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/passover/?format=list",
+                "subCategoryTitle": "Passover",
+                "subCategoryCount": "25"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/pasta/?format=list",
+                "subCategoryTitle": "Pasta",
+                "subCategoryCount": "64"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/peanut-butter/?format=list",
+                "subCategoryTitle": "Peanut Butter",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/photo/?format=list",
+                "subCategoryTitle": "Photo",
+                "subCategoryCount": "1101"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/pickled/?format=list",
+                "subCategoryTitle": "Pickled",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/picnics/?format=list",
+                "subCategoryTitle": "Picnics",
+                "subCategoryCount": "75"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/pizza/?format=list",
+                "subCategoryTitle": "Pizza",
+                "subCategoryCount": "21"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/portuguese/?format=list",
+                "subCategoryTitle": "Portuguese",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/put-an-egg-on-it/?format=list",
+                "subCategoryTitle": "Put An Egg On It",
+                "subCategoryCount": "30"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/qa/?format=list",
+                "subCategoryTitle": "Q&A",
+                "subCategoryCount": "5"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/quick/?format=list",
+                "subCategoryTitle": "Quick",
+                "subCategoryCount": "65"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/round-up/?format=list",
+                "subCategoryTitle": "Round-Up",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/russian/?format=list",
+                "subCategoryTitle": "Russian",
+                "subCategoryCount": "8"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/salad/?format=list",
+                "subCategoryTitle": "Salad",
+                "subCategoryCount": "116"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sandwich/?format=list",
+                "subCategoryTitle": "Sandwich",
+                "subCategoryCount": "14"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/savory-sauces-condiments/?format=list",
+                "subCategoryTitle": "Savory Sauces and Condiments",
+                "subCategoryCount": "9"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/scones-biscuits/?format=list",
+                "subCategoryTitle": "Scones/Biscuits",
+                "subCategoryCount": "20"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/seafood/?format=list",
+                "subCategoryTitle": "Seafood",
+                "subCategoryCount": "12"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/side-dish/?format=list",
+                "subCategoryTitle": "Side Dish",
+                "subCategoryCount": "60"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/slow-cooker/?format=list",
+                "subCategoryTitle": "Slow Cooker",
+                "subCategoryCount": "6"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/snack/?format=list",
+                "subCategoryTitle": "Snack",
+                "subCategoryCount": "26"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/soup/?format=list",
+                "subCategoryTitle": "Soup",
+                "subCategoryCount": "38"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/spanish/?format=list",
+                "subCategoryTitle": "Spanish",
+                "subCategoryCount": "12"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/spring/?format=list",
+                "subCategoryTitle": "Spring",
+                "subCategoryCount": "42"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/stew/?format=list",
+                "subCategoryTitle": "Stew",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/summer/?format=list",
+                "subCategoryTitle": "Summer",
+                "subCategoryCount": "197"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/tart/?format=list",
+                "subCategoryTitle": "Tarts/Quiche",
+                "subCategoryCount": "24"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/tex-mex/?format=list",
+                "subCategoryTitle": "Tex-Mex",
+                "subCategoryCount": "29"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/thai/?format=list",
+                "subCategoryTitle": "Thai",
+                "subCategoryCount": "5"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/thanksgiving/?format=list",
+                "subCategoryTitle": "Thanksgiving",
+                "subCategoryCount": "61"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/travel/?format=list",
+                "subCategoryTitle": "Travel",
+                "subCategoryCount": "22"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegan/?format=list",
+                "subCategoryTitle": "Vegan",
+                "subCategoryCount": "43"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetarian/?format=list",
+                "subCategoryTitle": "Vegetarian",
+                "subCategoryCount": "264"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vietnamese/?format=list",
+                "subCategoryTitle": "Vietnamese",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/waffles/?format=list",
+                "subCategoryTitle": "Waffles",
+                "subCategoryCount": "7"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/weeknight-favorite/?format=list",
+                "subCategoryTitle": "Weeknight Favorite",
+                "subCategoryCount": "82"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/winter/?format=list",
+                "subCategoryTitle": "Winter",
+                "subCategoryCount": "64"
+            },
+            {
+                "subCategoryTitle": " li",
+                "subCategoryCount": ""
+            }
+        ]
+    },
+    {
+        "Fruit": [
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/apple/?format=list",
+                "subCategoryTitle": "Apple",
+                "subCategoryCount": "32"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/apricots/?format=list",
+                "subCategoryTitle": "Apricots",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/avocado/?format=list",
+                "subCategoryTitle": "Avocado",
+                "subCategoryCount": "8"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/bananas/?format=list",
+                "subCategoryTitle": "Bananas",
+                "subCategoryCount": "8"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/blackberries/?format=list",
+                "subCategoryTitle": "Blackberries",
+                "subCategoryCount": "8"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/blueberries/?format=list",
+                "subCategoryTitle": "Blueberries",
+                "subCategoryCount": "15"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/cantaloupe/?format=list",
+                "subCategoryTitle": "Cantaloupe",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/cherries/?format=list",
+                "subCategoryTitle": "Cherries",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/cranberries/?format=list",
+                "subCategoryTitle": "Cranberries",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/dates/?format=list",
+                "subCategoryTitle": "Dates",
+                "subCategoryCount": "5"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/figs/?format=list",
+                "subCategoryTitle": "Figs",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/grapefruit/?format=list",
+                "subCategoryTitle": "Grapefruit",
+                "subCategoryCount": "4"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/grapes/?format=list",
+                "subCategoryTitle": "Grapes",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/honeydew/?format=list",
+                "subCategoryTitle": "Honeydew",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/lemon/?format=list",
+                "subCategoryTitle": "Lemon",
+                "subCategoryCount": "25"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/lime/?format=list",
+                "subCategoryTitle": "Lime",
+                "subCategoryCount": "10"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/mango/?format=list",
+                "subCategoryTitle": "Mango",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/nectarine/?format=list",
+                "subCategoryTitle": "Nectarine",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/orange/?format=list",
+                "subCategoryTitle": "Orange",
+                "subCategoryCount": "14"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/peach/?format=list",
+                "subCategoryTitle": "Peach",
+                "subCategoryCount": "13"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/pear/?format=list",
+                "subCategoryTitle": "Pear",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/pineapple/?format=list",
+                "subCategoryTitle": "Pineapple",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/plum/?format=list",
+                "subCategoryTitle": "Plum",
+                "subCategoryCount": "9"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/pomegranate/?format=list",
+                "subCategoryTitle": "Pomegranate",
+                "subCategoryCount": "6"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/raspberries/?format=list",
+                "subCategoryTitle": "Raspberries",
+                "subCategoryCount": "19"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/rhubarb/?format=list",
+                "subCategoryTitle": "Rhubarb",
+                "subCategoryCount": "15"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/strawberries/?format=list",
+                "subCategoryTitle": "Strawberries",
+                "subCategoryCount": "26"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/watermelon/?format=list",
+                "subCategoryTitle": "Watermelon",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryTitle": " li",
+                "subCategoryCount": ""
+            }
+        ]
+    },
+    {
+        "Sweets": [
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/bars/?format=list",
+                "subCategoryTitle": "Bars",
+                "subCategoryCount": "20"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/brownies-blondies/?format=list",
+                "subCategoryTitle": "Brownies/Blondies",
+                "subCategoryCount": "19"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/cake/?format=list",
+                "subCategoryTitle": "Cake",
+                "subCategoryCount": "125"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/candy/?format=list",
+                "subCategoryTitle": "Candy",
+                "subCategoryCount": "25"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/celebration-cakes/?format=list",
+                "subCategoryTitle": "Celebration Cakes",
+                "subCategoryCount": "54"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/chocolate/?format=list",
+                "subCategoryTitle": "Chocolate",
+                "subCategoryCount": "120"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/cookie/?format=list",
+                "subCategoryTitle": "Cookie",
+                "subCategoryCount": "79"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/crumbles-crisps/?format=list",
+                "subCategoryTitle": "Crumbles/Crisps",
+                "subCategoryCount": "20"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/doughnut/?format=list",
+                "subCategoryTitle": "Doughnut",
+                "subCategoryCount": "5"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/everyday-cakes/?format=list",
+                "subCategoryTitle": "Everyday Cakes",
+                "subCategoryCount": "62"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/ice-creamsorbet/?format=list",
+                "subCategoryTitle": "Ice Cream/Sorbet",
+                "subCategoryCount": "24"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/popsicles/?format=list",
+                "subCategoryTitle": "Popsicles",
+                "subCategoryCount": "8"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/pudding/?format=list",
+                "subCategoryTitle": "Pudding",
+                "subCategoryCount": "16"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/tarts-pies/?format=list",
+                "subCategoryTitle": "Tarts/Pies",
+                "subCategoryCount": "68"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/wedding-cake/?format=list",
+                "subCategoryTitle": "Wedding Cake",
+                "subCategoryCount": "5"
+            },
+            {
+                "subCategoryTitle": " li",
+                "subCategoryCount": ""
+            }
+        ]
+    },
+    {
+        "Vegetable": [
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/artichokes/?format=list",
+                "subCategoryTitle": "Artichokes",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/asparagus/?format=list",
+                "subCategoryTitle": "Asparagus",
+                "subCategoryCount": "12"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/broccoli/?format=list",
+                "subCategoryTitle": "Broccoli",
+                "subCategoryCount": "11"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/brussels-sprouts/?format=list",
+                "subCategoryTitle": "Brussels Sprouts",
+                "subCategoryCount": "7"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/cabbage/?format=list",
+                "subCategoryTitle": "Cabbage",
+                "subCategoryCount": "18"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/carrots/?format=list",
+                "subCategoryTitle": "Carrots",
+                "subCategoryCount": "16"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/cauliflower/?format=list",
+                "subCategoryTitle": "Cauliflower",
+                "subCategoryCount": "20"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/celery/?format=list",
+                "subCategoryTitle": "Celery",
+                "subCategoryCount": "5"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/corn/?format=list",
+                "subCategoryTitle": "Corn",
+                "subCategoryCount": "15"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/cucumber/?format=list",
+                "subCategoryTitle": "Cucumber",
+                "subCategoryCount": "18"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/eggplant/?format=list",
+                "subCategoryTitle": "Eggplant",
+                "subCategoryCount": "17"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/fennel/?format=list",
+                "subCategoryTitle": "Fennel",
+                "subCategoryCount": "4"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/green-beans/?format=list",
+                "subCategoryTitle": "Green Beans",
+                "subCategoryCount": "10"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/?format=list",
+                "subCategoryTitle": "Greens",
+                "subCategoryCount": "6"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/arugula/?format=list",
+                "subCategoryTitle": "Arugula",
+                "subCategoryCount": "8"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/broccoli-rabe/?format=list",
+                "subCategoryTitle": "Broccoli Rabe",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/endive/?format=list",
+                "subCategoryTitle": "Endive",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/escarole/?format=list",
+                "subCategoryTitle": "Escarole",
+                "subCategoryCount": "3"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/herbs/?format=list",
+                "subCategoryTitle": "Herbs",
+                "subCategoryCount": "7"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/kale/?format=list",
+                "subCategoryTitle": "Kale",
+                "subCategoryCount": "10"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/radicchio/?format=list",
+                "subCategoryTitle": "Radicchio",
+                "subCategoryCount": "2"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/spinach/?format=list",
+                "subCategoryTitle": "Spinach",
+                "subCategoryCount": "16"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/greens/swiss-chard/?format=list",
+                "subCategoryTitle": "Swiss Chard",
+                "subCategoryCount": "8"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/leeks/?format=list",
+                "subCategoryTitle": "Leeks",
+                "subCategoryCount": "12"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/mushrooms/?format=list",
+                "subCategoryTitle": "Mushrooms",
+                "subCategoryCount": "35"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/onion/?format=list",
+                "subCategoryTitle": "Onions",
+                "subCategoryCount": "24"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/parsnips/?format=list",
+                "subCategoryTitle": "Parsnips",
+                "subCategoryCount": "1"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/peas/?format=list",
+                "subCategoryTitle": "Peas",
+                "subCategoryCount": "10"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/peppers/?format=list",
+                "subCategoryTitle": "Peppers",
+                "subCategoryCount": "25"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/potatoes/?format=list",
+                "subCategoryTitle": "Potatoes",
+                "subCategoryCount": "67"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/radishes/?format=list",
+                "subCategoryTitle": "Radishes",
+                "subCategoryCount": "9"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/ramps/?format=list",
+                "subCategoryTitle": "Ramps",
+                "subCategoryCount": "1"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/summer-squash/?format=list",
+                "subCategoryTitle": "Summer Squash",
+                "subCategoryCount": "10"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/tomatoes/?format=list",
+                "subCategoryTitle": "Tomatoes",
+                "subCategoryCount": "44"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/winter-squash/?format=list",
+                "subCategoryTitle": "Winter Squash",
+                "subCategoryCount": "15"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/winter-squash/pumpkin/?format=list",
+                "subCategoryTitle": "Pumpkin",
+                "subCategoryCount": "14"
+            },
+            {
+                "subCategoryURL": "https://smittenkitchen.com/recipes/vegetable/zucchini/?format=list",
+                "subCategoryTitle": "Zucchini",
+                "subCategoryCount": "24"
+            },
+            {
+                "subCategoryTitle": " li",
+                "subCategoryCount": ""
+            }
+        ]
+    }
+]
