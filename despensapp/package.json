@@ -1,0 +1,19 @@
+{
+  "name": "despensapp",
+  "version": "0.0.0",
+  "description": "Hello Expo!",
+  "author": null,
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "expo": "16.0.0",
+    "react": "16.0.0-alpha.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-16.0.0.tar.gz",
+    "react-native-elements": "^0.12.1",
+    "react-native-vector-icons": "^4.1.1",
+    "react-navigation": "^1.0.0-beta.8",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  }
+}
