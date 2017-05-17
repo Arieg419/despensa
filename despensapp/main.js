@@ -4,33 +4,53 @@ import { StyleSheet, Text, View, Platform } from 'react-native'
 import { TabNavigator, DrawerNavigator, StackNavigator } from 'react-navigation'
 import { Provider } from 'react-redux'
 
+
 import store from './store'
 import AuthScreen from './screens/AuthScreen'
 import WelcomeScreen from './screens/WelcomeScreen'
-import MapScreen from './screens/MapScreen'
-import DeckScreen from './screens/DeckScreen'
-import SettingsScreen from './screens/SettingsScreen'
+import DiscoverScreen from './screens/DiscoverScreen'
+import DiscoverListScreen from './screens/DiscoverListScreen'
+import DiscoverRecipeScreen from './screens/DiscoverRecipeScreen'
+import ProfileScreen from './screens/ProfileScreen'
+import AskScreen from './screens/AskScreen'
+import InboxScreen from './screens/InboxScreen'
+import SearchScreen from './screens/SearchScreen'
 import ReviewScreen from './screens/ReviewScreen'
-// import DrawerNavigator from './screens/Drawer'
+
+import Nav from './components/Nav'
 
 class App extends React.Component {
+
+  componentDidMount() {
+
+  }
+
   render() {
-    const MainNavigator = TabNavigator({
+    const MainNavigator = DrawerNavigator({
       welcome: { screen: WelcomeScreen },
       auth: { screen: AuthScreen },
       main: {
-        screen: TabNavigator({
-          map: { screen: MapScreen },
-          deck: { screen: DeckScreen },
-          review: {
+        screen: DrawerNavigator({
+          discover: {
             screen: StackNavigator({
-              review: { screen: ReviewScreen },
-              settings: { screen: SettingsScreen }
+              discovercategory: { screen: DiscoverScreen },
+              discoverlist: { screen: DiscoverListScreen },
+              discoverrecipe: { screen: DiscoverRecipeScreen },
             })
-          }
-        })
-      },
-    })
+          },
+          search: { screen: SearchScreen },
+          ask: { screen: AskScreen },
+          profile: { screen: ProfileScreen },
+          inbox: { screen: InboxScreen },
+        }),
+      }
+    },
+    {
+      lazy: true
+    },
+    {
+      headerMode: 'screen'
+    });
 
     return (
       <Provider store={store}>
