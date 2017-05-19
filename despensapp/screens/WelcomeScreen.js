@@ -4,6 +4,8 @@ import { View, Text, AsyncStorage } from 'react-native';
 import { AppLoading } from 'expo';
 import Slides from '../components/Slides';
 
+console.disableYellowBox = true
+
 const SLIDE_DATA = [
   { text: 'Welcome to Despensa', color: '#03A9F4' },
   { text: 'Explore new dishes', color: '#009688' },
@@ -20,7 +22,7 @@ class WelcomeScreen extends Component {
       this.props.navigation.navigate('discover');
       this.setState({ token });
     } else {
-      this.setState({ token: false }); 
+      this.setState({ token: false });
     }
   }
 
