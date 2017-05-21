@@ -6,6 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
   ListView,
+  FlatList,
   Image,
   Platform
 } from 'react-native'
@@ -13,8 +14,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Button } from 'react-native-elements'
 
 import { cities } from '../data/recent_searches'
-
-const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
+import DiscoveryRow from '../components/DiscoveryRow'
 
 class DiscoverScreen extends Component {
   static navigationOptions = ({ navigation}) => ({
@@ -30,18 +30,14 @@ class DiscoverScreen extends Component {
     borderBottomWidth: 0,
   })
 
-  state = {
-    datasource: ds.cloneWithRows(cities)
-  }
-
-  cityBox(val){
+  discoveryRow(item){
     return(
-      <Image source={val.img} resizeMode="stretch" style={styles.recentlySearchedItem}>
+      <Image source={item.img} resizeMode="stretch" style={styles.recentlySearchedItem}>
         <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontSize:30, fontWeight:'700'}}>
-          {val.city_name}
+          {item.city_name}
         </Text>
         <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff',fontSize:14, fontWeight:'600'}}>
-          {val.date_from} - {val.date_to}
+          {item.date_from} - {item.date_to}
         </Text>
       </Image>
       )
@@ -66,37 +62,25 @@ class DiscoverScreen extends Component {
               </Text>
             </TouchableOpacity>
           </View>
-          <View style={styles.discoverRows}>
-            <Text style={styles.title}>Trending Recipes</Text>
-            <ListView
-            dataSource = {this.state.datasource}
-            renderRow={(rowData) => this.cityBox(rowData)}
-            horizontal = {true}
-            />
-          </View>
-          <View style={styles.discoverRows}>
-            <Text style={styles.title}>Recent Searches</Text>
-            <ListView
-            dataSource = {this.state.datasource}
-            renderRow={(rowData) => this.cityBox(rowData)}
-            horizontal = {true}
-            />
-          </View>
-          <View style={styles.discoverRows}>
-            <Text style={styles.title}>New Recipes</Text>
-            <ListView
-            dataSource = {this.state.datasource}
-            renderRow={(rowData) => this.cityBox(rowData)}
-            horizontal = {true}
-            />
-          </View>
+          <DiscoveryRow
+            data={cities}
+            title={"Trending Recipes"}
+          />
+          <DiscoveryRow
+            data={cities}
+            title={"Recent Searches"}
+          />
+          <DiscoveryRow
+            data={cities}
+            title={"New Recipes"}
+          />
         </ScrollView>
         <TouchableOpacity style={styles.searchFAB}>
           <MaterialIcons
             name="search"
             size={22}
             color="#fff"
-            onPress={() => { this.props.navigation.navigate('discoverlist') }}
+            onPress={() => { this.props.navigation.navigate('discovercategories') }}
             />
         </TouchableOpacity>
       </View>
@@ -135,26 +119,6 @@ const styles = StyleSheet.create({
     margin: 10,
     marginLeft:20,
     marginTop:30.
-  },
-  discoverRows: {
-    backgroundColor: '#fff',
-    borderBottomWidth:1,
-    borderBottomColor:'#d3d3d3',
-  },
-  title: {
-    fontWeight:'400',
-    fontSize:20,
-    color:'#333',
-    margin:20,
-    marginBottom:15
-  },
-  recentlySearchedItem: {
-    width:330,
-    height:220,
-    margin:5,
-    marginBottom:30,
-    justifyContent:'center',
-    alignItems:'center'
   },
   searchFAB: {
     width:60,

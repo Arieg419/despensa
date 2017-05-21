@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
 class DiscoverRecipeScreen extends Component {
-  static navigationOptions = ({ navigation}) => ({
-    headerTitle: <Text style={{ fontSize: 20 }}>Buttermilk Pancakes</Text>
+  static navigationOptions = ({ navigation }) => ({
+    headerTitle: <Text style={{ fontSize: 20 }}>{navigation.state.params["routeNaming"]}</Text>
   })
 
   render() {

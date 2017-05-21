@@ -9,7 +9,8 @@ import store from './store'
 // import AuthScreen from './screens/AuthScreen'
 // import WelcomeScreen from './screens/WelcomeScreen'
 import DiscoverScreen from './screens/DiscoverScreen'
-import DiscoverListScreen from './screens/DiscoverListScreen'
+import DiscoverCategoriesScreen from './screens/DiscoverCategoriesScreen'
+import DiscoverCategoryScreen from './screens/DiscoverCategoryScreen'
 import DiscoverRecipeScreen from './screens/DiscoverRecipeScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import AskScreen from './screens/AskScreen'
@@ -33,8 +34,9 @@ class App extends React.Component {
         screen: DrawerNavigator({
           discover: {
             screen: StackNavigator({
-              discovercategory: { screen: DiscoverScreen },
-              discoverlist: { screen: DiscoverListScreen },
+              discoverscreen: { screen: DiscoverScreen },
+              discovercategories: { screen: DiscoverCategoriesScreen },
+              discovercategory: { screen: DiscoverCategoryScreen },
               discoverrecipe: { screen: DiscoverRecipeScreen },
             })
           },
