@@ -5,15 +5,25 @@ import {
   StyleSheet,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native'
 import { Card, ListItem, Button } from 'react-native-elements'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 import { cities } from '../data/recent_searches'
 import RecipeList from '../components/RecipeList'
 
 class DiscoverCategoryScreen extends Component {
   static navigationOptions = ({ navigation}) => ({
-    headerTitle: <Text style={{ fontSize: 20 }}>Discover Category Cool</Text>
+    headerTitle: <Text style={{ fontSize: 20 }}>Discover Category Cool</Text>,
+    headerRight: <TouchableOpacity style={{ marginRight: 20 }}>
+      <MaterialIcons
+        name="reorder"
+        size={26}
+        color='#ff585b'
+        onPress={() => { navigation.navigate('DrawerOpen') }}
+        />
+    </TouchableOpacity>
   })
 
   displayRecipes() {

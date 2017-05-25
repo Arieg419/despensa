@@ -5,7 +5,9 @@ import {
   StyleSheet,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Button } from 'react-native-elements'
 
 import { cities } from '../data/recent_searches'
@@ -13,7 +15,15 @@ import DiscoveryListRow from '../components/DiscoveryListRow'
 
 class DiscoverListScreen extends Component {
   static navigationOptions = ({ navigation}) => ({
-    headerTitle: <Text style={{ fontSize: 20 }}>Discover Categories</Text>
+    headerTitle: <Text style={{ fontSize: 20 }}>Discover Categories</Text>,
+    headerRight: <TouchableOpacity style={{ marginRight: 20 }}>
+      <MaterialIcons
+        name="reorder"
+        size={26}
+        color='#ff585b'
+        onPress={() => { navigation.navigate('DrawerOpen') }}
+        />
+    </TouchableOpacity>
   })
 
   render() {

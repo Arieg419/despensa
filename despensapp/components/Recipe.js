@@ -72,29 +72,6 @@ class Recipe extends Component {
               </View>
             </Image>
           </CardSection>
-          <View style={styles.iconContainer} >
-            <Icon.Button
-            name={'bookmark'}
-            size={30}
-            backgroundColor='white'
-            color={'#bb4467'}
-            style={{ flex: 1 }}
-            />
-            <Icon.Button
-            name="paper-plane-o"
-            size={30}
-            backgroundColor='white'
-            color='#6B7794'
-            style={{ flex: 1 }}
-            />
-            <Icon.Button
-            name="link"
-            size={30}
-            backgroundColor='white'
-            color='#6B7794'
-            style={{ flex: 1 }}
-            />
-          </View>
           <View style={styles.toggleContainer}>
             <ToggleButton
               onPress={() => this.setState({ showIngredients: true })}

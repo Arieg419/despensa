@@ -28,6 +28,7 @@ class DiscoverScreen extends Component {
     ),
     header: null,
     borderBottomWidth: 0,
+    headerRight: <Button title="Open drawer" onPress={() => navigation.navigate('DrawerOpen')}  />
   })
 
   discoveryRow(item){
@@ -48,12 +49,20 @@ class DiscoverScreen extends Component {
       <View style={styles.container}>
         <ScrollView style={{flex:1,}}>
           <View style={styles.container}>
+            <TouchableOpacity style={{margin: 20, marginTop: 30 , padding: 0, flexDirection: 'row', justifyContent: 'flex-end'}}>
+              <MaterialIcons
+                name="reorder"
+                size={26}
+                color="#fff"
+                onPress={() => { this.props.navigation.navigate('DrawerOpen') }}
+                />
+            </TouchableOpacity>
             <Image
               source = {require('../assets/img/logoWhite.png')}
               resizeMode="contain"
-              style={styles.hero}
+              style={styles.logo}
             />
-            <Text style={styles.main}>
+            <Text style={styles.welcomeText}>
               Welcome to Despensa!
             </Text>
             <TouchableOpacity style={styles.heroButton}>
@@ -94,11 +103,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#ff585b',
     height:400,
   },
-  hero: {
+  logo: {
     width: 40,
     height: 40,
     marginLeft: 20,
-    marginTop: 65,
+    marginTop: 0,
+    padding: 0
   },
   heroButton: {
     margin:10,
@@ -110,7 +120,7 @@ const styles = StyleSheet.create({
     borderRadius:18,
     width:150,
   },
-  main: {
+  welcomeText: {
     fontSize: 25,
     textAlign: 'left',
     color:'#fff',
@@ -118,7 +128,7 @@ const styles = StyleSheet.create({
     width:200,
     margin: 10,
     marginLeft:20,
-    marginTop:30.
+    marginTop:30,
   },
   searchFAB: {
     width:60,
