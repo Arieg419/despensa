@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
+import Recipe from '../components/Recipe'
 
 class DiscoverRecipeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -9,13 +10,7 @@ class DiscoverRecipeScreen extends Component {
   render() {
     return (
       <View>
-        <Text>DiscoverRecipeScreen</Text>
-        <Text>DiscoverRecipeScreen</Text>
-        <Text>DiscoverRecipeScreen</Text>
-        <Text>DiscoverRecipeScreen</Text>
-        <Text>DiscoverRecipeScreen</Text>
-        <Text>DiscoverRecipeScreen</Text>
-        <Text>DiscoverRecipeScreen</Text>
+        <Recipe />
       </View>
     )
   }
