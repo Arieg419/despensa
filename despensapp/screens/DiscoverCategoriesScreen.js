@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
       marginBottom:15
     },
     hero: {
-      width:380,
+      width:800,
       height:260,
       justifyContent:'center',
       alignItems:'center',

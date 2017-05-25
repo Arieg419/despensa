@@ -9,24 +9,24 @@ import {
 import { Card, ListItem, Button } from 'react-native-elements'
 
 import { cities } from '../data/recent_searches'
-import DiscoveryListRow from '../components/DiscoveryListRow'
+import RecipeList from '../components/RecipeList'
 
 class DiscoverCategoryScreen extends Component {
   static navigationOptions = ({ navigation}) => ({
-    headerTitle: <Text style={{ fontSize: 20 }}>Discover Categories</Text>
+    headerTitle: <Text style={{ fontSize: 20 }}>Discover Category Cool</Text>
   })
+
+  displayRecipes() {
+    cities.map((city) => {
+
+    })
+  }
 
   render() {
     return (
       <View style={styles.parentcontainer}>
         <ScrollView style={{flex:1,}}>
-          <Card
-            image={require('../assets/img/image11.jpg')}
-          >
-            <Text style={{marginBottom: 10}}>
-              The idea with React Native Elements is more about component structure than actual design.
-            </Text>
-          </Card>
+          <RecipeList data={cities} />
           <Button
             title="Specific reciper"
             onPress={() => { this.props.navigation.navigate('discoverrecipe', {routeNaming: "Rasperry Pie"}) }}
