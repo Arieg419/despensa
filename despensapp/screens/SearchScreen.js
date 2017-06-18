@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
-import { ScrollView, View, StyleSheet, Platform, TouchableOpacity } from 'react-native'
+import {
+  ScrollView,
+  View, StyleSheet,
+  Platform,
+  TouchableOpacity,
+  TextInput
+} from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import {
   Button,
   Text,
-  FormInput,
   FormLabel,
   CheckBox,
   SearchBar,
@@ -16,15 +21,31 @@ class SearchScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ing1: 'Enter an ingredient...',
-      ing2: 'Enter an ingredient...',
-      ing3: 'Enter an ingredient...',
-    };
+      ing1: 'Enter ingredient',
+      ing2: 'Enter ingredient',
+      ing3: 'Enter ingredient',
+    }
   }
 
-  onInputChange(term) {
-    this.setState({"ing1": term});
-    console.log(`term is ${term}`)
+  onInputChange(text, id) {
+    switch(id) {
+      case "ing1":
+        this.setState({ "ing1": text })
+        break
+      case "ing2":
+        this.setState({ "ing2": text })
+        break
+      case "ing3":
+        this.setState({ "ing3": text })
+        break
+    }
+  }
+
+  handleSearchParams(state) {
+    const { ing1, ing2, ing3 } = state
+    console.log('ing1', ing1)
+    console.log('ing2', ing2)
+    console.log('ing3', ing3)
   }
 
   static navigationOptions = ({ navigation}) => ({
@@ -44,10 +65,10 @@ class SearchScreen extends Component {
           <FormLabel containerStyle={styles.labelContainerStyle}>
             Ingredient 1
           </FormLabel>
-          <FormInput
-            textInputRef="textInputRef"
+          <TextInput
+            style={{ height: 40, marginLeft: 20 }}
             placeholder={this.state.ing1}
-            onChange={event => this.onInputChange(event.target.value)}
+            onChangeText={ text => this.onInputChange(text, "ing1")}
           />
           <FormLabel
             textInputRef="textInputRef"
@@ -55,22 +76,23 @@ class SearchScreen extends Component {
           >
             Ingredient 2
           </FormLabel>
-          <FormInput
-            textInputRef="textInputRef"
-            placeholder="Enter an ingredient..."
+          <TextInput
+            style={{ height: 40, marginLeft: 20 }}
+            placeholder={this.state.ing2}
+            onChangeText={ text => this.onInputChange(text, "ing2")}
           />
           <FormLabel
-            textInputRef="textInputRef"
             containerStyle={styles.labelContainerStyle}
           >
             Ingredient 3
           </FormLabel>
-          <FormInput
-            textInputRef="textInputRef"
-            placeholder="Enter an ingredient..."
+          <TextInput
+            style={{ height: 40, marginLeft: 20 }}
+            placeholder={this.state.ing3}
+            onChangeText={ text => this.onInputChange(text, "ing3")}
           />
           <Button
-            onPress={() => console.log('form was submitted!')}
+            onPress={() => this.handleSearchParams(this.state)}
             icon={{ name: 'done' }}
             buttonStyle={{ marginTop: 15 }}
             title="SEARCH"
