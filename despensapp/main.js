@@ -40,7 +40,11 @@ class App extends React.Component {
               discoverrecipe: { screen: DiscoverRecipeScreen },
             })
           },
-          search: { screen: SearchScreen },
+          search: {
+            screen: StackNavigator({
+              searchscreen: { screen: SearchScreen },
+            })
+          },
           ask: { screen: AskScreen },
           profile: { screen: ProfileScreen },
           inbox: { screen: InboxScreen },

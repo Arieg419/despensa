@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import {
   ScrollView,
-  View, StyleSheet,
+  View,
+  StyleSheet,
   Platform,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  Image,
 } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
-
 import {
   Button,
   Text,
@@ -15,119 +15,78 @@ import {
   CheckBox,
   SearchBar,
 } from 'react-native-elements'
+import Icon from 'react-native-vector-icons/MaterialIcons'
+import TagInputComponent from '../components/TagInput'
+
 
 class SearchScreen extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      ing1: 'Enter ingredient',
-      ing2: 'Enter ingredient',
-      ing3: 'Enter ingredient',
-    }
   }
 
-  onInputChange(text, id) {
-    switch(id) {
-      case "ing1":
-        this.setState({ "ing1": text })
-        break
-      case "ing2":
-        this.setState({ "ing2": text })
-        break
-      case "ing3":
-        this.setState({ "ing3": text })
-        break
-    }
-  }
-
-  handleSearchParams(state) {
-    const { ing1, ing2, ing3 } = state
-    console.log('ing1', ing1)
-    console.log('ing2', ing2)
-    console.log('ing3', ing3)
-  }
-
-  static navigationOptions = ({ navigation}) => ({
+  static navigationOptions = ({ navigation }) => ({
     drawerLabel: 'Search',
     drawerIcon: ({ tintColor }) => (
       <Icon
         name="search"
         size={24}
         style={{ color: tintColor }} />
-    )
+    ),
+    headerTitle: <Text style={{ fontSize: 20 }}>Search for Recipes</Text>,
+    headerRight: <TouchableOpacity style={{ marginRight: 20 }}>
+      <Icon
+        name="reorder"
+        size={26}
+        color='#ff585b'
+        onPress={() => { navigation.navigate('DrawerOpen') }}
+        />
+    </TouchableOpacity>,
+    headerLeft: <TouchableOpacity style={{ marginLeft: 5 }}>
+      <Icon
+        name="arrow-back"
+        size={26}
+        color='#757575'
+        onPress={() => { navigation.navigate('discoverscreen') }}
+        />
+    </TouchableOpacity>
   })
 
-  renderFormsSearchBars() {
-    if (Platform.OS === 'ios') {
-      return (
-        <View>
-          <FormLabel containerStyle={styles.labelContainerStyle}>
-            Ingredient 1
-          </FormLabel>
-          <TextInput
-            style={{ height: 40, marginLeft: 20 }}
-            placeholder={this.state.ing1}
-            onChangeText={ text => this.onInputChange(text, "ing1")}
-          />
-          <FormLabel
-            textInputRef="textInputRef"
-            containerStyle={styles.labelContainerStyle}
-          >
-            Ingredient 2
-          </FormLabel>
-          <TextInput
-            style={{ height: 40, marginLeft: 20 }}
-            placeholder={this.state.ing2}
-            onChangeText={ text => this.onInputChange(text, "ing2")}
-          />
-          <FormLabel
-            containerStyle={styles.labelContainerStyle}
-          >
-            Ingredient 3
-          </FormLabel>
-          <TextInput
-            style={{ height: 40, marginLeft: 20 }}
-            placeholder={this.state.ing3}
-            onChangeText={ text => this.onInputChange(text, "ing3")}
-          />
-          <Button
-            onPress={() => this.handleSearchParams(this.state)}
-            icon={{ name: 'done' }}
-            buttonStyle={{ marginTop: 15 }}
-            title="SEARCH"
-          />
-        </View>
-      );
-    }
-  }
   render() {
     return (
       <ScrollView
         style={{ backgroundColor: 'white' }}
         keyboardShouldPersistTaps="always"
       >
-        <View style={styles.headingContainer}>
-          <TouchableOpacity style={{ padding: 0, flexDirection: 'row', justifyContent: 'flex-end', margin: 20, marginTop: 25 }}>
-            <Icon
-              name="reorder"
-              size={26}
-              color="#fff"
-              onPress={() => { this.props.navigation.navigate('DrawerOpen') }}
-              />
-          </TouchableOpacity>
-          <View style={{justifyContent: 'center', alignItems: 'center', marginBottom: 10 }}>
-            <Icon color="white" name="search" size={62} />
-            <Text style={styles.heading}>Search</Text>
-          </View>
-        </View>
-        {this.renderFormsSearchBars()}
+      <View style={styles.container}>
+        <Image source={require("../assets/img/search.jpg")} resizeMode="stretch" style={styles.hero}>
+          <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontSize:30, fontWeight:'700'}}>
+            Find Your Dish
+          </Text>
+          <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff',fontSize:14, fontWeight:'600'}}>
+            Search by Ingredients
+          </Text>
+        </Image>
+      </View>
+        <TagInputComponent
+          style={{ margin: 10}}
+        />
+        <Button
+          buttonStyle={{ marginTop: 15, borderRadius: 20, backgroundColor:'#ff585b'}}
+          title="SEARCH"
+        />
       </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent:'center',
+      alignItems:'center',
+  },
   headingContainer: {
     padding: 5,
     backgroundColor: '#ff585b',
@@ -140,6 +99,12 @@ const styles = StyleSheet.create({
   labelContainerStyle: {
     marginTop: 8,
   },
+  hero: {
+    width:800,
+    height:260,
+    justifyContent:'center',
+    alignItems:'center',
+  }
 });
 
 export default SearchScreen
