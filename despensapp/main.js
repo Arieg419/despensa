@@ -17,6 +17,7 @@ import AskScreen from './screens/AskScreen'
 import InboxScreen from './screens/InboxScreen'
 import SearchScreen from './screens/SearchScreen'
 import ReviewScreen from './screens/ReviewScreen'
+import AddRecipeScreen from './screens/AddRecipeScreen'
 
 import Nav from './components/Nav'
 
@@ -45,9 +46,17 @@ class App extends React.Component {
               searchscreen: { screen: SearchScreen },
             })
           },
-          ask: { screen: AskScreen },
+          ask: {
+            screen: StackNavigator({
+              askscreen: { screen: AskScreen },
+            })
+          },
+          addrecipe: {
+            screen: StackNavigator({
+              addrecipescreen: { screen: AddRecipeScreen },
+            })
+          },
           profile: { screen: ProfileScreen },
-          inbox: { screen: InboxScreen },
         }),
       }
     },

@@ -27,7 +27,24 @@ class AskScreen extends Component {
         name="create"
         size={24}
         style={{ color: tintColor }} />
-    )
+    ),
+    headerTitle: <Text style={{ fontSize: 20 }}>Ask for a Recipe</Text>,
+    headerRight: <TouchableOpacity style={{ marginRight: 20 }}>
+      <Icon
+        name="reorder"
+        size={26}
+        color='#ff585b'
+        onPress={() => { navigation.navigate('DrawerOpen') }}
+        />
+    </TouchableOpacity>,
+    headerLeft: <TouchableOpacity style={{ marginLeft: 5 }}>
+      <Icon
+        name="arrow-back"
+        size={26}
+        color='#757575'
+        onPress={() => { navigation.navigate('discoverscreen') }}
+        />
+    </TouchableOpacity>
   })
 
   constructor(props) {
