@@ -15,7 +15,7 @@ class RecipeListRow extends Component {
   recipeItem(item){
     return(
       <Card
-        image={require('../assets/img/image11.jpg')}
+        image={require('../assets/img/discover_food.jpg')}
         style={{margin: 30, marginBottom: 10}}
       >
         <Text style={{marginBottom: 10}}>

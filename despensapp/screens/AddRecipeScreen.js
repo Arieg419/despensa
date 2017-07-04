@@ -59,7 +59,7 @@ class AddRecipeScreen extends Component {
         keyboardShouldPersistTaps="always"
       >
       <View style={styles.container}>
-        <Image source={require("../assets/img/search.jpg")} resizeMode="stretch" style={styles.hero}>
+        <Image source={require("../assets/img/addRecipe.jpg")} resizeMode="stretch" style={styles.hero}>
           <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontSize:30, fontWeight:'700'}}>
             Upload a Recipe
           </Text>

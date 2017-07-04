@@ -64,7 +64,7 @@ class Recipe extends Component {
         <Card style={{ flex: 1 }}>
           <CardSection style={{ justifyContent: 'center' }}>
             <Image
-            source={require('../assets/img/image10.jpg')}
+            source={require('../assets/img/pie.jpg')}
             style={styles.backdrop}
             >
               <View style={styles.backdropView}>

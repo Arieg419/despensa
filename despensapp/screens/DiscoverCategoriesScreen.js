@@ -10,7 +10,12 @@ import {
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Button } from 'react-native-elements'
 
-import { cities } from '../data/recent_searches'
+import {
+  categories_fruits,
+  categories_general,
+  categories_sweets,
+  categories_vegetables,
+} from '../data/recent_searches'
 import DiscoveryListRow from '../components/DiscoveryListRow'
 
 class DiscoverListScreen extends Component {
@@ -31,7 +36,7 @@ class DiscoverListScreen extends Component {
       <View style={styles.parentcontainer}>
         <ScrollView style={{flex:1,}}>
           <View style={styles.container}>
-            <Image source={require("../assets/img/image10.jpg")} resizeMode="stretch" style={styles.hero}>
+            <Image source={require("../assets/img/general_sushi.jpg")} resizeMode="stretch" style={styles.hero}>
               <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontSize:30, fontWeight:'700'}}>
                 Discover By Theme
               </Text>
@@ -41,20 +46,20 @@ class DiscoverListScreen extends Component {
             </Image>
           </View>
           <DiscoveryListRow
-            data={cities}
+            data={categories_general}
             title={"General Recipes"}
           />
-        <DiscoveryListRow
-            data={cities}
-            title={"Sweets Recipes"}
+          <DiscoveryListRow
+              data={categories_sweets}
+              title={"Sweets Recipes"}
           />
-        <DiscoveryListRow
-            data={cities}
-            title={"Vegetable Recipes"}
+          <DiscoveryListRow
+              data={categories_vegetables}
+              title={"Vegetable Recipes"}
           />
-        <DiscoveryListRow
-            data={cities}
-            title={"Fruit Recipes"}
+          <DiscoveryListRow
+              data={categories_fruits}
+              title={"Fruit Recipes"}
           />
           <Button
             title="Specific reciper"

@@ -4,7 +4,8 @@ import {
   View, StyleSheet,
   Platform,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  Image,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -110,20 +111,16 @@ class AskScreen extends Component {
         style={{ backgroundColor: 'white' }}
         keyboardShouldPersistTaps="always"
       >
-        <View style={styles.headingContainer}>
-          <TouchableOpacity style={{ padding: 0, flexDirection: 'row', justifyContent: 'flex-end', margin: 20, marginTop: 25 }}>
-            <Icon
-              name="reorder"
-              size={26}
-              color="#fff"
-              onPress={() => { this.props.navigation.navigate('DrawerOpen') }}
-              />
-          </TouchableOpacity>
-          <View style={{justifyContent: 'center', alignItems: 'center', marginBottom: 10 }}>
-            <Icon color="white" name="search" size={62} />
-            <Text style={styles.heading}>Ask</Text>
-          </View>
-        </View>
+      <View style={styles.container}>
+        <Image source={require("../assets/img/askRecipe.jpg")} resizeMode="stretch" style={styles.hero}>
+          <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontSize:30, fontWeight:'700'}}>
+            Ask for a Recipe
+          </Text>
+          <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff',fontSize:14, fontWeight:'600'}}>
+            List your ingredients
+          </Text>
+        </Image>
+      </View>
         {this.renderFormsSearchBars()}
       </ScrollView>
     );
@@ -131,6 +128,12 @@ class AskScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent:'center',
+      alignItems:'center',
+  },
   headingContainer: {
     padding: 5,
     backgroundColor: '#ff585b',
@@ -139,6 +142,12 @@ const styles = StyleSheet.create({
   heading: {
     color: 'white',
     fontSize: 22,
+  },
+  hero: {
+    width:800,
+    height:260,
+    justifyContent:'center',
+    alignItems:'center',
   },
   labelContainerStyle: {
     marginTop: 8,

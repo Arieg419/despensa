@@ -15,7 +15,7 @@ import RecipeList from '../components/RecipeList'
 
 class DiscoverCategoryScreen extends Component {
   static navigationOptions = ({ navigation}) => ({
-    headerTitle: <Text style={{ fontSize: 20 }}>Discover Category Cool</Text>,
+    headerTitle: <Text style={{ fontSize: 20 }}>Discover Category</Text>,
     headerRight: <TouchableOpacity style={{ marginRight: 20 }}>
       <MaterialIcons
         name="reorder"
