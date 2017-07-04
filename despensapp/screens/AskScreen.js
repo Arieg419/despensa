@@ -16,6 +16,8 @@ import {
   SearchBar,
 } from 'react-native-elements'
 
+import TagInputComponent from '../components/TagInput'
+
 class AskScreen extends Component {
 
   static navigationOptions = ({ navigation}) => ({
@@ -59,37 +61,22 @@ class AskScreen extends Component {
   }
 
   renderFormsSearchBars() {
-    if (Platform.OS === 'ios') {
       return (
         <View>
           <FormLabel containerStyle={styles.labelContainerStyle}>
-            Ingredient 1
+            List Recipe Ingredients
+          </FormLabel>
+          <TagInputComponent
+          />
+          <FormLabel containerStyle={styles.labelContainerStyle}>
+            Recipe Description
           </FormLabel>
           <TextInput
             style={{ height: 40, marginLeft: 20 }}
             placeholder={this.state.ing1}
             onChangeText={ text => this.onInputChange(text, "ing1")}
-          />
-          <FormLabel
-            textInputRef="textInputRef"
-            containerStyle={styles.labelContainerStyle}
-          >
-            Ingredient 2
-          </FormLabel>
-          <TextInput
-            style={{ height: 40, marginLeft: 20 }}
-            placeholder={this.state.ing2}
-            onChangeText={ text => this.onInputChange(text, "ing2")}
-          />
-          <FormLabel
-            containerStyle={styles.labelContainerStyle}
-          >
-            Ingredient 3
-          </FormLabel>
-          <TextInput
-            style={{ height: 40, marginLeft: 20 }}
-            placeholder={this.state.ing3}
-            onChangeText={ text => this.onInputChange(text, "ing3")}
+            multiline = {true}
+            numberOfLines = {4}
           />
           <Button
             onPress={() => this.handleSearchParams(this.state)}
@@ -98,8 +85,7 @@ class AskScreen extends Component {
             title="SEARCH"
           />
         </View>
-      );
-    }
+      )
   }
   render() {
     return (
