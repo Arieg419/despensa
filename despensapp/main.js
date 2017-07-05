@@ -6,8 +6,8 @@ import { Provider } from 'react-redux'
 
 
 import store from './store'
-// import AuthScreen from './screens/AuthScreen'
-// import WelcomeScreen from './screens/WelcomeScreen'
+import AuthScreen from './screens/AuthScreen'
+import WelcomeScreen from './screens/WelcomeScreen'
 import DiscoverScreen from './screens/DiscoverScreen'
 import DiscoverCategoriesScreen from './screens/DiscoverCategoriesScreen'
 import DiscoverCategoryScreen from './screens/DiscoverCategoryScreen'
@@ -29,8 +29,8 @@ class App extends React.Component {
 
   render() {
     const MainNavigator = DrawerNavigator({
-      // welcome: { screen: WelcomeScreen },
-      // auth: { screen: AuthScreen },
+      welcome: { screen: WelcomeScreen },
+      auth: { screen: AuthScreen },
       main: {
         screen: DrawerNavigator({
           discover: {

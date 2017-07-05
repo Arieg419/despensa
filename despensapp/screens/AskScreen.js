@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {
   ScrollView,
-  View, StyleSheet,
+  View,
+  StyleSheet,
   Platform,
   TouchableOpacity,
   TextInput,
@@ -99,8 +100,8 @@ class AskScreen extends Component {
           <Button
             onPress={() => this.handleSearchParams(this.state)}
             icon={{ name: 'done' }}
-            buttonStyle={{ marginTop: 15 }}
-            title="SEARCH"
+            buttonStyle={{ marginTop: 15, borderRadius: 20, backgroundColor:'#ff585b'}}
+            title="Request Recipe"
           />
         </View>
       )

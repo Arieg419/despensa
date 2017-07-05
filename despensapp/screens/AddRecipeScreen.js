@@ -70,10 +70,27 @@ class AddRecipeScreen extends Component {
       </View>
         <TagInputComponent
           style={{ margin: 10}}
+          inputProps={{ placeholder: 'Specify required ingredients', autoFocus: false }}
+        />
+        <FormLabel containerStyle={styles.labelContainerStyle}>
+          Recipe Title
+        </FormLabel>
+        <TextInput
+          style={{ height: 40, marginLeft: 20 }}
+          placeholder={"Title for your dish"}
+        />
+        <FormLabel containerStyle={styles.labelContainerStyle}>
+          Recipe Description
+        </FormLabel>
+        <TextInput
+          style={{ height: 40, marginLeft: 20 }}
+          placeholder={"Describe the Recipe"}
+          multiline = {true}
+          numberOfLines = {4}
         />
         <Button
           buttonStyle={{ marginTop: 15, borderRadius: 20, backgroundColor:'#ff585b'}}
-          title="SEARCH"
+          title="Add Recipe"
         />
       </ScrollView>
     );

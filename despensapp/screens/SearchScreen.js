@@ -8,13 +8,17 @@ import {
   TextInput,
   Image,
 } from 'react-native'
+
 import {
   Button,
+  ButtonGroup,
   Text,
   FormLabel,
   CheckBox,
   SearchBar,
+  Slider,
 } from 'react-native-elements'
+
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import TagInputComponent from '../components/TagInput'
 
@@ -22,7 +26,14 @@ import TagInputComponent from '../components/TagInput'
 class SearchScreen extends Component {
 
   constructor(props) {
-    super(props);
+    super(props)
+
+    this.state = {
+      selectedIndex: 0,
+      value: 0,
+    }
+
+    this.updateIndex = this.updateIndex.bind(this);
   }
 
   static navigationOptions = ({ navigation }) => ({
@@ -52,7 +63,14 @@ class SearchScreen extends Component {
     </TouchableOpacity>
   })
 
+  updateIndex(selectedIndex) {
+    this.setState({ selectedIndex });
+  }
+
   render() {
+    const buttons = ['Easy', 'Everything']
+    const { selectedIndex } = this.state
+
     return (
       <ScrollView
         style={{ backgroundColor: 'white' }}
@@ -72,6 +90,22 @@ class SearchScreen extends Component {
           style={{ margin: 10 }}
           inputProps={{ placeholder: 'Add Ingredients', autoFocus: false }}
         />
+      <View style={{flex: 1, alignItems: 'stretch', justifyContent: 'center', margin: 10}}>
+          <Slider
+            value={this.state.value}
+            onValueChange={(value) => this.setState({value})}
+            minimumValue={0}
+            maximumValue={120} />
+          <Text>Cooking Time: {Math.floor(this.state.value)} minutes</Text>
+        </View>
+        <View style={{ marginTop: 20 }}>
+          <ButtonGroup
+            textStyle={{ fontSize: 13 }}
+            onPress={this.updateIndex}
+            selectedIndex={selectedIndex}
+            buttons={buttons}
+          />
+        </View>
         <Button
           buttonStyle={{ marginTop: 15, borderRadius: 20, backgroundColor:'#ff585b'}}
           title="Find Recipe"

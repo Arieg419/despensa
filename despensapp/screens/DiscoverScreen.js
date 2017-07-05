@@ -80,7 +80,7 @@ class DiscoverScreen extends Component {
           </View>
           <DiscoveryRow
             data={discover_trending}
-            title={"Trending Recipes"}
+            title={"What's Trending"}
           />
           <DiscoveryRow
             data={discover_recent}
