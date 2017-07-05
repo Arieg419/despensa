@@ -1,27 +1,31 @@
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   View,
   Text,
   TouchableOpacity,
   StyleSheet,
   FlatList,
-} from 'react-native';
+} from 'react-native'
 import { Card, ListItem, Button } from 'react-native-elements'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 class RecipeListRow extends Component {
 
   recipeItem(item){
     return(
-      <Card
-        image={require('../assets/img/discover_food.jpg')}
-        style={{margin: 30, marginBottom: 10}}
-      >
-        <Text style={{marginBottom: 10}}>
-          The idea with React Native Elements is more about component structure than actual design.
-        </Text>
-      </Card>
+      <TouchableOpacity
+        onPress={() => { this.props.navigatorfunc.navigation.navigate('discoverrecipe', {routeNaming: "Rasperry Pie"}) }}
+        >
+        <Card
+          image={item.img}
+          style={{margin: 30, marginBottom: 10}}
+        >
+          <Text style={{marginBottom: 10}}>
+            The idea with React Native Elements is more about component structure than actual design.
+          </Text>
+        </Card>
+      </TouchableOpacity>
       )
   }
 

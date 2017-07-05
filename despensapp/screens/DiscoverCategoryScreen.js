@@ -10,7 +10,7 @@ import {
 import { Card, ListItem, Button } from 'react-native-elements'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
-import { cities } from '../data/recent_searches'
+import { discover_recent } from '../data/recent_searches'
 import RecipeList from '../components/RecipeList'
 
 class DiscoverCategoryScreen extends Component {
@@ -26,17 +26,14 @@ class DiscoverCategoryScreen extends Component {
     </TouchableOpacity>
   })
 
-  displayRecipes() {
-    cities.map((city) => {
-
-    })
-  }
-
   render() {
     return (
       <View style={styles.parentcontainer}>
         <ScrollView style={{flex:1,}}>
-          <RecipeList data={cities} />
+          <RecipeList
+            data={discover_recent}
+            navigatorfunc={this.props}
+          />
           <Button
             title="Specific reciper"
             onPress={() => { this.props.navigation.navigate('discoverrecipe', {routeNaming: "Rasperry Pie"}) }}

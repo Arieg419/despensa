@@ -28,7 +28,10 @@ class DiscoveryListRow extends Component {
   render() {
     return (
       <View style={styles.discoverRows}>
-        <TouchableOpacity style={{flexDirection: "row", justifyContent: 'space-between', margin: 15 }}>
+        <TouchableOpacity
+          style={{flexDirection: "row", justifyContent: 'space-between', margin: 15 }}
+          onPress={() => { this.props.navigatorfunc.navigation.navigate('discovercategory', {routeNaming: "Rasperry Pie"}) }}
+          >
           <Text style={[styles.title, ]}>{this.props.title}</Text>
           <MaterialIcons
             name="keyboard-arrow-right"

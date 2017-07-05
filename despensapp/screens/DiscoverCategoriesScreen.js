@@ -48,24 +48,22 @@ class DiscoverListScreen extends Component {
           <DiscoveryListRow
             data={categories_general}
             title={"General Recipes"}
+            navigatorfunc={this.props}
           />
           <DiscoveryListRow
-              data={categories_sweets}
-              title={"Sweets Recipes"}
+            data={categories_sweets}
+            title={"Sweets Recipes"}
+            navigatorfunc={this.props}
           />
           <DiscoveryListRow
-              data={categories_vegetables}
-              title={"Vegetable Recipes"}
+            data={categories_vegetables}
+            title={"Vegetable Recipes"}
+            navigatorfunc={this.props}
           />
           <DiscoveryListRow
-              data={categories_fruits}
-              title={"Fruit Recipes"}
-          />
-          <Button
-            title="Specific reciper"
-            onPress={() => { this.props.navigation.navigate('discovercategory', {routeNaming: "Rasperry Pie"}) }}
-            backgroundColor="#fff"
-            color="rgba(0,122,255,1)"
+            data={categories_fruits}
+            title={"Fruit Recipes"}
+            navigatorfunc={this.props}
           />
         </ScrollView>
       </View>

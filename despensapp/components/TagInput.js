@@ -19,8 +19,8 @@ class TagInputComponent extends Component {
   render() {
     const inputProps = {
       keyboardType: 'default',
-      placeholder: 'Add Ingredients',
-      autoFocus: true,
+      // placeholder: 'Add Ingredients',
+      // autoFocus: true,
     }
 
     return (
@@ -31,7 +31,7 @@ class TagInputComponent extends Component {
             onChange={this.onChangeTags}
             tagColor="#AFEAAA"
             tagTextColor="white"
-            inputProps={inputProps}
+            inputProps={this.props.inputProps}
             numberOfLines={2}
           />
         </View>

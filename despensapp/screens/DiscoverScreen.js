@@ -13,7 +13,11 @@ import {
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Button } from 'react-native-elements'
 
-import { cities } from '../data/recent_searches'
+import {
+  discover_trending,
+  discover_recent,
+  discover_new
+} from '../data/recent_searches'
 import DiscoveryRow from '../components/DiscoveryRow'
 
 class DiscoverScreen extends Component {
@@ -65,22 +69,25 @@ class DiscoverScreen extends Component {
             <Text style={styles.welcomeText}>
               Welcome to Despensa!
             </Text>
-            <TouchableOpacity style={styles.heroButton}>
+            <TouchableOpacity
+              style={styles.heroButton}
+              onPress={() => { this.props.navigation.navigate('discovercategories') }}
+              >
               <Text style={{color:'#fff', textAlign:'center', fontWeight:'600'}}>
                 Discover recipes
               </Text>
             </TouchableOpacity>
           </View>
           <DiscoveryRow
-            data={cities}
+            data={discover_trending}
             title={"Trending Recipes"}
           />
           <DiscoveryRow
-            data={cities}
+            data={discover_recent}
             title={"Recent Searches"}
           />
           <DiscoveryRow
-            data={cities}
+            data={discover_new}
             title={"New Recipes"}
           />
         </ScrollView>
@@ -89,7 +96,7 @@ class DiscoverScreen extends Component {
             name="search"
             size={22}
             color="#fff"
-            onPress={() => { this.props.navigation.navigate('discovercategories') }}
+            onPress={() => { this.props.navigation.navigate('searchscreen') }}
             />
         </TouchableOpacity>
       </View>

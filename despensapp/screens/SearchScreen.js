@@ -69,11 +69,12 @@ class SearchScreen extends Component {
         </Image>
       </View>
         <TagInputComponent
-          style={{ margin: 10}}
+          style={{ margin: 10 }}
+          inputProps={{ placeholder: 'Add Ingredients', autoFocus: false }}
         />
         <Button
           buttonStyle={{ marginTop: 15, borderRadius: 20, backgroundColor:'#ff585b'}}
-          title="SEARCH"
+          title="Find Recipe"
         />
       </ScrollView>
     );
