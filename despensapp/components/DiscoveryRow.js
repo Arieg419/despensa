@@ -7,19 +7,32 @@ import {
   FlatList,
   Image,
 } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
+import LikeButton from './common/LikeButton'
+
 
 class DiscoveryRow extends Component {
 
   discoveryRow(item){
+
     return(
       <Image source={item.img} resizeMode="stretch" style={styles.recentlySearchedItem}>
-        <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontSize:30, fontWeight:'700'}}>
-          {item.city_name}
-        </Text>
-        <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff',fontSize:14, fontWeight:'600'}}>
-          {item.date_from} - {item.date_to}
-        </Text>
+        <View>
+          <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontSize:30, fontWeight:'700'}}>
+          </Text>
+        </View>
+        <View>
+          <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontSize:30, fontWeight:'700'}}>
+            {item.city_name}
+          </Text>
+          <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff',fontSize:14, fontWeight:'600'}}>
+            {item.date_from} - {item.date_to}
+          </Text>
+        </View>
+        <TouchableOpacity style={{ alignSelf: 'flex-end', marginRight:10, marginBottom: 10 }}>
+          <LikeButton />
+        </TouchableOpacity>
       </Image>
       )
   }
@@ -57,7 +70,7 @@ const styles = StyleSheet.create({
     height:220,
     margin:5,
     marginBottom:30,
-    justifyContent:'center',
+    justifyContent:'space-between',
     alignItems:'center'
   }
 });

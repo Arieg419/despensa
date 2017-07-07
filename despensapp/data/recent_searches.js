@@ -1,12 +1,12 @@
-const cities = exports.cities =
-  [
-    {"id":1,"city_name":"Três Pontas","date_from":"9/21/2015","date_to":"1/3/2016", "img": require("../assets/img/image1.png")},
-    {"id":2,"city_name":"Dongxi","date_from":"10/30/2015","date_to":"2/28/2016", "img": require("../assets/img/image2.jpg")},
-    {"id":3,"city_name":"Gaoqiao","date_from":"4/28/2016","date_to":"9/10/2016", "img": require("../assets/img/image3.jpg")},
-    {"id":4,"city_name":"Redon","date_from":"10/11/2015","date_to":"7/27/2016", "img": require("../assets/img/image4.jpg")},
-    {"id":5,"city_name":"Rzepiennik Strzyżewski","date_from":"3/16/2016","date_to":"6/27/2016", "img": require("../assets/img/image5.jpg")},
-    {"id":6,"city_name":"Tugulym","date_from":"10/9/2015","date_to":"6/21/2016", "img": require("../assets/img/image6.jpg")},
-  ]
+// const cities = exports.cities =
+//   [
+//     {"id":1,"city_name":"Três Pontas","date_from":"9/21/2015","date_to":"1/3/2016", "img": require("../assets/img/image1.png")},
+//     {"id":2,"city_name":"Dongxi","date_from":"10/30/2015","date_to":"2/28/2016", "img": require("../assets/img/image2.jpg")},
+//     {"id":3,"city_name":"Gaoqiao","date_from":"4/28/2016","date_to":"9/10/2016", "img": require("../assets/img/image3.jpg")},
+//     {"id":4,"city_name":"Redon","date_from":"10/11/2015","date_to":"7/27/2016", "img": require("../assets/img/image4.jpg")},
+//     {"id":5,"city_name":"Rzepiennik Strzyżewski","date_from":"3/16/2016","date_to":"6/27/2016", "img": require("../assets/img/image5.jpg")},
+//     {"id":6,"city_name":"Tugulym","date_from":"10/9/2015","date_to":"6/21/2016", "img": require("../assets/img/image6.jpg")},
+//   ]
 
 const categories_general = exports.categories_general =
   [

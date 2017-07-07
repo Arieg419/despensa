@@ -62,7 +62,7 @@ class DiscoverScreen extends Component {
                 />
             </TouchableOpacity>
             <Image
-              source = {require('../assets/img/logoWhite.png')}
+              source={require('../assets/img/logoWhite.png')}
               resizeMode="contain"
               style={styles.logo}
             />
