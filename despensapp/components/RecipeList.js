@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   FlatList,
+  Image,
 } from 'react-native'
 import { Card, ListItem, Button } from 'react-native-elements'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
@@ -16,15 +17,19 @@ class RecipeListRow extends Component {
     return(
       <TouchableOpacity
         onPress={() => { this.props.navigatorfunc.navigation.navigate('discoverrecipe', {routeNaming: "Rasperry Pie"}) }}
-        >
-        <Card
-          image={item.img}
-          style={{margin: 30, marginBottom: 10}}
-        >
-          <Text style={{marginBottom: 10}}>
-            The idea with React Native Elements is more about component structure than actual design.
-          </Text>
-        </Card>
+      >
+      <Image
+      source={item.img}
+      style={{width:350, height:250, margin:5, justifyContent:'center', alignItems:'center', alignSelf:'center'}}
+      resizeMode="stretch"
+      >
+        <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontWeight:'700', fontSize:24}}>
+          {item.city_name}
+        </Text>
+        <Text style={{backgroundColor:'rgba(0,0,0,0)', color:'#fff', fontWeight:'400', fontSize:14}}>
+          {item.date_from} - {item.date_to}
+        </Text>
+      </Image>
       </TouchableOpacity>
       )
   }

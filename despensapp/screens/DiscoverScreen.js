@@ -23,16 +23,17 @@ import DiscoveryRow from '../components/DiscoveryRow'
 class DiscoverScreen extends Component {
   static navigationOptions = ({ navigation}) => ({
     drawerLabel: 'Discover',
-    drawerIcon: ({ tintColor }) => (
+    drawerIcon: ({ tintColor }) => {
+      console.log(tintColor)
+      return (
         <MaterialIcons
           name="whatshot"
           size={24}
           style={{ color: tintColor }}
         />
-    ),
+      )
+    },
     header: null,
-    borderBottomWidth: 0,
-    headerRight: <Button title="Open drawer" onPress={() => navigation.navigate('DrawerOpen')}  />
   })
 
   discoveryRow(item){

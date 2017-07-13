@@ -34,12 +34,6 @@ class DiscoverCategoryScreen extends Component {
             data={discover_recent}
             navigatorfunc={this.props}
           />
-          <Button
-            title="Specific reciper"
-            onPress={() => { this.props.navigation.navigate('discoverrecipe', {routeNaming: "Rasperry Pie"}) }}
-            backgroundColor="#fff"
-            color="rgba(0,122,255,1)"
-          />
         </ScrollView>
       </View>
     )
@@ -49,6 +43,7 @@ class DiscoverCategoryScreen extends Component {
 const styles = StyleSheet.create({
     parentcontainer: {
         flex: 1,
+        backgroundColor: '#fff',
     },
     container: {
         flex: 1,

@@ -6,8 +6,8 @@ import { Provider } from 'react-redux'
 
 
 import store from './store'
-// import AuthScreen from './screens/AuthScreen'
-// import WelcomeScreen from './screens/WelcomeScreen'
+import AuthScreen from './screens/AuthScreen'
+import WelcomeScreen from './screens/WelcomeScreen'
 import DiscoverScreen from './screens/DiscoverScreen'
 import DiscoverCategoriesScreen from './screens/DiscoverCategoriesScreen'
 import DiscoverCategoryScreen from './screens/DiscoverCategoryScreen'
@@ -23,9 +23,9 @@ import Nav from './components/Nav'
 
 class App extends React.Component {
 
-  componentDidMount() {
-
-  }
+  // componentDidMount() {
+  //
+  // }
 
   render() {
     const MainNavigator = DrawerNavigator({
@@ -61,10 +61,12 @@ class App extends React.Component {
       }
     },
     {
-      lazy: true
-    },
-    {
-      headerMode: 'screen'
+      contentOptions: {
+        activeTintColor: '#7BC4A4',
+        style: {
+          backgroundColor:'rgba(255,255,255,0.93)',
+        },
+      }
     });
 
     return (
