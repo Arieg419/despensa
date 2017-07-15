@@ -23,7 +23,51 @@ const mapIndexToCategory = (idx) => {
 const URL = 'https://smittenkitchen.com/recipes/'
 let categories
 
-app.get('/scrape', (req, res) => {
+app.get('/subcategoryitems', (req,res) => {
+    fs.readFile('./sub_categories.json', 'utf8', (err, data) => {
+    if (err) throw err
+
+    data = JSON.parse(data)
+
+    let subcat_list = []
+    let recipeRet = []
+
+    subcat_list = data[0]["General"].map((item, i) => {
+      if (typeof item.subCategoryURL != 'undefined'
+        && !fs.existsSync(`${item.subCategoryTitle}`)
+        && `${item.subCategoryTitle}` == 'Vegetarian') {
+
+        // Make HTTP request
+        request(item.subCategoryURL, (err, response, html) => {
+          if(err) res.send('request failed ....')
+
+          // Load Cheerio Library
+          const $ = cheerio.load(html)
+
+          // Opening Brackets for JSON Array
+          fs.appendFileSync(`${item.subCategoryTitle}.json`, `[`)
+
+          // Scraping Recipe Entry per Category (General, Sweets, Vegetables, Fruit)
+          $('#main li').each(function(i, recipeEntry) {
+            // console.log(JSON.stringify($($(recipeEntry).html()).attr("href")))
+            recipeRet.push(JSON.stringify($($(recipeEntry).html()).attr("href")))
+          })
+          console.log(`writing new ${item.subCategoryTitle}.json file`)
+          fs.appendFileSync(`${item.subCategoryTitle}.json`, JSON.stringify(`${recipeRet},`))
+
+          // Closing Brackets for JSON Array
+          fs.appendFileSync(`${item.subCategoryTitle}.json`, `]`)
+
+        })
+        return recipeRet
+      }
+
+    })
+    res.send(recipeRet)
+  });
+})
+
+app.get('/scrape_subcategories', (req, res) => {
     request(URL, (err, response, html) => {
       if(err) res.send('request failed ....')
 
@@ -37,13 +81,11 @@ app.get('/scrape', (req, res) => {
         recipeSections.push($(this).text())
       })
       recipeSections = recipeSections.slice(0,4) // remove non relevant h2
-      // console.log(recipeSections)
 
       // Build JSON
       categories = recipeSections.map((category) => {
         return { [category] : [] }
       })
-      // console.log(categories)
 
       $('ul.smittenkitchen-recipe-listing').each(function(i, category) {
         $( $(category).html() + ' li' ).each(function(j, elem) {
@@ -71,11 +113,13 @@ app.get('/scrape', (req, res) => {
       res.send(categories)
     })
 
-    // TODO Get list of items per sub category
-
-    // TODO Get article + imgs for dish
 })
 
 app.listen('8081')
 console.log('Magic happens on port 8081')
 exports = module.exports = app
+
+// return { "SubCategoryItem": {
+//   "title" : item.subCategoryTitle,
+//   "url": item.subCategoryURL,
+//  }
