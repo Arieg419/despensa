@@ -588,10 +588,6 @@
                 "subCategoryURL": "https://smittenkitchen.com/recipes/fruit/watermelon/?format=list",
                 "subCategoryTitle": "Watermelon",
                 "subCategoryCount": "3"
-            },
-            {
-                "subCategoryTitle": " li",
-                "subCategoryCount": ""
             }
         ]
     },
@@ -604,7 +600,7 @@
             },
             {
                 "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/brownies-blondies/?format=list",
-                "subCategoryTitle": "Brownies/Blondies",
+                "subCategoryTitle": "BrowniesBlondies",
                 "subCategoryCount": "19"
             },
             {
@@ -634,7 +630,7 @@
             },
             {
                 "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/crumbles-crisps/?format=list",
-                "subCategoryTitle": "Crumbles/Crisps",
+                "subCategoryTitle": "CrumblesCrisps",
                 "subCategoryCount": "20"
             },
             {
@@ -649,7 +645,7 @@
             },
             {
                 "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/ice-creamsorbet/?format=list",
-                "subCategoryTitle": "Ice Cream/Sorbet",
+                "subCategoryTitle": "Ice CreamSorbet",
                 "subCategoryCount": "24"
             },
             {
@@ -664,17 +660,13 @@
             },
             {
                 "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/tarts-pies/?format=list",
-                "subCategoryTitle": "Tarts/Pies",
+                "subCategoryTitle": "TartsPies",
                 "subCategoryCount": "68"
             },
             {
                 "subCategoryURL": "https://smittenkitchen.com/recipes/sweets/wedding-cake/?format=list",
                 "subCategoryTitle": "Wedding Cake",
                 "subCategoryCount": "5"
-            },
-            {
-                "subCategoryTitle": " li",
-                "subCategoryCount": ""
             }
         ]
     },

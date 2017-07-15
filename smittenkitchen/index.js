@@ -32,10 +32,10 @@ app.get('/subcategoryitems', (req,res) => {
     let subcat_list = []
     let recipeRet = []
 
-    subcat_list = data[0]["General"].map((item, i) => {
+    // && `${item.subCategoryTitle}` == 'Orange'
+    subcat_list = data[3][mapIndexToCategory(3)].map((item, i) => {
       if (typeof item.subCategoryURL != 'undefined'
-        && !fs.existsSync(`${item.subCategoryTitle}`)
-        && `${item.subCategoryTitle}` == 'Vegetarian') {
+        && !fs.existsSync(`${item.subCategoryTitle}`) && `${item.subCategoryTitle}` == 'Zucchini' ) {
 
         // Make HTTP request
         request(item.subCategoryURL, (err, response, html) => {
@@ -63,7 +63,7 @@ app.get('/subcategoryitems', (req,res) => {
       }
 
     })
-    res.send(recipeRet)
+    res.send("Generating file...")
   });
 })
 
