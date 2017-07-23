@@ -18,56 +18,54 @@ import InboxScreen from './screens/InboxScreen'
 import SearchScreen from './screens/SearchScreen'
 import ReviewScreen from './screens/ReviewScreen'
 import AddRecipeScreen from './screens/AddRecipeScreen'
-
-import Nav from './components/Nav'
+import DrawerMenu from './containers/DrawerMenu'
 
 class App extends React.Component {
 
-  // componentDidMount() {
-  //
-  // }
-
   render() {
-    const MainNavigator = DrawerNavigator({
+    const MainNavigator = DrawerNavigator(
       // welcome: { screen: WelcomeScreen },
       // auth: { screen: AuthScreen },
-      main: {
-        screen: DrawerNavigator({
-          discover: {
-            screen: StackNavigator({
-              discoverscreen: { screen: DiscoverScreen },
-              discovercategories: { screen: DiscoverCategoriesScreen },
-              discovercategory: { screen: DiscoverCategoryScreen },
-              discoverrecipe: { screen: DiscoverRecipeScreen },
-            })
-          },
-          search: {
-            screen: StackNavigator({
-              searchscreen: { screen: SearchScreen },
-            })
-          },
-          ask: {
-            screen: StackNavigator({
-              askscreen: { screen: AskScreen },
-            })
-          },
-          addrecipe: {
-            screen: StackNavigator({
-              addrecipescreen: { screen: AddRecipeScreen },
-            })
-          },
-          profile: { screen: ProfileScreen },
-        }),
-      }
-    },
-    {
-      contentOptions: {
-        activeTintColor: '#7BC4A4',
-        style: {
-          backgroundColor:'rgba(255,255,255,0.93)',
+      {
+        Main: {
+          screen: StackNavigator({
+            discoverscreen: { screen: DiscoverScreen },
+            discovercategories: { screen: DiscoverCategoriesScreen },
+            discovercategory: { screen: DiscoverCategoryScreen },
+            discoverrecipe: { screen: DiscoverRecipeScreen },
+          })
         },
+        search: {
+          screen: StackNavigator({
+            searchscreen: { screen: SearchScreen },
+          })
+        },
+        ask: {
+          screen: StackNavigator({
+            askscreen: { screen: AskScreen },
+          })
+        },
+        addrecipe: {
+          screen: StackNavigator({
+            addrecipescreen: { screen: AddRecipeScreen },
+          })
+        },
+        profile: {
+          screen: ProfileScreen
+        },
+      },
+      {
+        contentComponent: DrawerMenu,
       }
-    });
+    );
+
+    // {
+    //   contentOptions: {
+    //     activeTintColor: '#7BC4A4',
+    //     style: {
+    //       backgroundColor:'rgba(255,255,255,0.93)',
+    //     },
+    //   }
 
     return (
       <Provider store={store}>
