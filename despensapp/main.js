@@ -14,7 +14,7 @@ import DiscoverCategoryScreen from './screens/DiscoverCategoryScreen'
 import DiscoverRecipeScreen from './screens/DiscoverRecipeScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import AskScreen from './screens/AskScreen'
-import InboxScreen from './screens/InboxScreen'
+import FavoritesScreen from './screens/FavoritesScreen'
 import SearchScreen from './screens/SearchScreen'
 import ReviewScreen from './screens/ReviewScreen'
 import AddRecipeScreen from './screens/AddRecipeScreen'
@@ -52,6 +52,9 @@ class App extends React.Component {
         },
         profile: {
           screen: ProfileScreen
+        },
+        favorites: {
+          screen: FavoritesScreen
         },
       },
       {

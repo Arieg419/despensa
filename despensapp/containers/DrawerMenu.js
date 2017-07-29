@@ -24,7 +24,7 @@ const menuData = [
   {icon: "ios-search", name:"Search", screenName:"search", key: 1},
   {icon: "ios-text-outline", name:"Ask", screenName:"ask", key: 3},
   {icon: "ios-add-outline", name:"Add Recipe", screenName:"addrecipe", key: 4},
-  {icon: "ios-heart-outline", name:"Favorites", screenName:"Hooli", key: 5},
+  {icon: "ios-heart-outline", name:"Favorites", screenName:"favorites", key: 5},
   {icon: "ios-person-outline", name:"Profile", screenName:"profile", key: 6},
   {icon: "ios-settings-outline", name:"Settings", screenName:"Hooli", key: 7},
 ]
