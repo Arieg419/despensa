@@ -17,15 +17,22 @@ The UI is pretty much done. Currently I am scraping and cleaning all the data th
 
 
 ### <a name="despensahome"></a>Home
+![#despensahome](https://github.com/Arieg419/despensa/blob/master/assets/Despensa_Home.png)
 
 ### <a name="despensadiscover"></a>Discover
+![#despensadiscover](https://github.com/Arieg419/despensa/blob/master/assets/Despensa_Discover.png)
 
 ### <a name="despensadiscovercategory"></a>Discover Category
+![#despensadiscovercategory](https://github.com/Arieg419/despensa/blob/master/assets/Despensa_Discover_Category.png)
 
 ### <a name="despensadiscoverdish"></a>Discover Dish
+![#despensadiscoverdish](https://github.com/Arieg419/despensa/blob/master/assets/Despensa_Discover_Dish.png)
 
 ### <a name="despensaask"></a>Ask
+![#despensaask](https://github.com/Arieg419/despensa/blob/master/assets/Despensa_Add_A_Recipe.png)
 
 ### <a name="despensafavorites"></a>Favorites
+![#despensafavorites](https://github.com/Arieg419/despensa/blob/master/assets/Despensa_Favorites.png)
 
 ### <a name="despensasearch"></a>Search
+![#despensasearch](https://github.com/Arieg419/despensa/blob/master/assets/Despensa_Search.png)
