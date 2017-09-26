@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import {
   View,
   Text,
@@ -12,7 +13,8 @@ import {
 } from 'react-native'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Button } from 'react-native-elements'
-
+import * as actions from '../actions';
+import { discover_actions } from '../actions/discovery_actions'
 import {
   discover_trending,
   discover_recent,
@@ -50,6 +52,8 @@ class DiscoverScreen extends Component {
   }
 
   render() {
+    console.log("actions debug remote JSON")
+    console.log(discover_actions)
     return (
       <View style={styles.container}>
         <ScrollView style={{flex:1,}}>
@@ -153,4 +157,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default DiscoverScreen
+export default connect(null, actions)(DiscoverScreen);

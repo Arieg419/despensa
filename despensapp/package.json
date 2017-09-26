@@ -6,6 +6,7 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
+    "axios": "^0.16.2",
     "expo": "16.0.0",
     "lodash": "^4.17.4",
     "react": "16.0.0-alpha.6",

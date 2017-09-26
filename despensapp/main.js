@@ -3,8 +3,6 @@ import React from 'react'
 import { StyleSheet, Text, View, Platform } from 'react-native'
 import { TabNavigator, DrawerNavigator, StackNavigator } from 'react-navigation'
 import { Provider } from 'react-redux'
-
-
 import store from './store'
 import AuthScreen from './screens/AuthScreen'
 import WelcomeScreen from './screens/WelcomeScreen'
@@ -61,14 +59,6 @@ class App extends React.Component {
         contentComponent: DrawerMenu,
       }
     );
-
-    // {
-    //   contentOptions: {
-    //     activeTintColor: '#7BC4A4',
-    //     style: {
-    //       backgroundColor:'rgba(255,255,255,0.93)',
-    //     },
-    //   }
 
     return (
       <Provider store={store}>
