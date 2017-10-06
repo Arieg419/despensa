@@ -13,12 +13,12 @@ import {
 } from 'react-native'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Button } from 'react-native-elements'
-import * as actions from '../actions';
-import { discover_actions } from '../actions/discovery_actions'
+// import { discoverRecipeTapped } from '../actions/discovery_actions';
+import * as actions from '../actions'
 import {
   discover_trending,
   discover_recent,
-  discover_new
+  discover_new,
 } from '../data/recent_searches'
 import DiscoveryRow from '../components/DiscoveryRow'
 
@@ -52,8 +52,8 @@ class DiscoverScreen extends Component {
   }
 
   render() {
-    console.log("actions debug remote JSON")
-    console.log(discover_actions)
+    console.log("sanity check")
+    console.log(actions)
     return (
       <View style={styles.container}>
         <ScrollView style={{flex:1,}}>
@@ -157,4 +157,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(null, actions)(DiscoverScreen);
+export default connect(null, null)(DiscoverScreen);
