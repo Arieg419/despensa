@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import { connect } from "react-redux"
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import {
   View,
   Text,
@@ -10,63 +10,39 @@ import {
   FlatList,
   Image,
   Platform
-} from "react-native"
-import MaterialIcons from "react-native-vector-icons/MaterialIcons"
-import { Button } from "react-native-elements"
-// import { discoverRecipeTapped } from '../actions/discovery_actions';
-import * as actions from "../actions"
+} from "react-native";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import { Button } from "react-native-elements";
+import * as actions from "../actions";
 import {
   discover_trending,
   discover_recent,
   discover_new
-} from "../data/recent_searches"
-import DiscoveryRow from "../components/DiscoveryRow"
+} from "../data/recent_searches";
+import DiscoveryRow from "../components/DiscoveryRow";
 
 class DiscoverScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     drawerLabel: "Discover",
     drawerIcon: ({ tintColor }) => {
-      console.log(tintColor)
+      console.log(tintColor);
       return (
         <MaterialIcons name="whatshot" size={24} style={{ color: tintColor }} />
-      )
+      );
     },
     header: null
-  })
+  });
 
   componentDidMount() {
-    console.log("actions", this.props)
+    console.log("actions", this.props);
   }
 
-  discoveryRow(item) {
-    return (
-      <Image
-        source={item.img}
-        resizeMode="stretch"
-        style={styles.recentlySearchedItem}
-      >
-        <Text
-          style={{
-            backgroundColor: "rgba(0,0,0,0)",
-            color: "#fff",
-            fontSize: 30,
-            fontWeight: "700"
-          }}
-        >
-          {item.city_name}
-        </Text>
-        <Text
-          style={{
-            backgroundColor: "rgba(0,0,0,0)",
-            color: "#fff",
-            fontSize: 14,
-            fontWeight: "600"
-          }}
-        >
-          {item.date_from} - {item.date_to}
-        </Text>
-      </Image>
-    )
+  onRecipeTapped() {
+    this.props.discoverRecipe(() => {
+      this.props.navigation.navigate("discovercategories", {
+        name: "Brent"
+      });
+    });
   }
 
   render() {
@@ -88,7 +64,7 @@ class DiscoverScreen extends Component {
                 size={26}
                 color="#fff"
                 onPress={() => {
-                  this.props.navigation.navigate("DrawerOpen")
+                  this.props.navigation.navigate("DrawerOpen");
                 }}
               />
             </TouchableOpacity>
@@ -101,7 +77,9 @@ class DiscoverScreen extends Component {
             <TouchableOpacity
               style={styles.heroButton}
               onPress={() => {
-                this.props.navigation.navigate("discovercategories")
+                this.props.navigation.navigate("discovercategories", {
+                  name: "Brent"
+                });
               }}
             >
               <Text
@@ -118,6 +96,7 @@ class DiscoverScreen extends Component {
           <DiscoveryRow
             data={discover_trending}
             onRecipePress={this.props.discoverRecipe}
+            navigatorfunc={this.props}
             title={"What's Trending"}
           />
           <DiscoveryRow
@@ -137,12 +116,12 @@ class DiscoverScreen extends Component {
             size={22}
             color="#fff"
             onPress={() => {
-              this.props.navigation.navigate("searchscreen")
+              this.props.navigation.navigate("searchscreen");
             }}
           />
         </TouchableOpacity>
       </View>
-    )
+    );
   }
 }
 
@@ -192,10 +171,10 @@ const styles = StyleSheet.create({
     bottom: 20,
     right: 20
   }
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   discoverRecipe: () => dispatch(actions.tapRecipeRequest())
-})
+});
 
-export default connect(null, mapDispatchToProps)(DiscoverScreen)
+export default connect(null, mapDispatchToProps)(DiscoverScreen);

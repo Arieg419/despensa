@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
   View,
   Text,
@@ -7,19 +7,27 @@ import {
   StyleSheet,
   FlatList,
   Image
-} from "react-native"
-import MaterialIcons from "react-native-vector-icons/MaterialIcons"
+} from "react-native";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
-import LikeButton from "./common/LikeButton"
+import LikeButton from "./common/LikeButton";
 
 class DiscoveryRow extends Component {
   static propTypes = {
     onRecipePress: PropTypes.func.isRequired
+  };
+
+  onButtonPress(item) {
+    this.props.onRecipePress();
+    this.props.navigatorfunc.navigation.navigate("discoverrecipe", {
+      routeNaming: item.city_name,
+      img: item.img
+    });
   }
 
   discoveryRow(item) {
     return (
-      <TouchableOpacity onPress={this.props.onRecipePress}>
+      <TouchableOpacity onPress={item => this.onButtonPress(item)}>
         <Image
           source={item.img}
           resizeMode="stretch"
@@ -60,11 +68,11 @@ class DiscoveryRow extends Component {
           <TouchableOpacity
             style={{ alignSelf: "flex-end", marginRight: 10, marginBottom: 10 }}
           >
-            <LikeButton />
+            <LikeButton likeDish={this.props.likeDish} />
           </TouchableOpacity>
         </Image>
       </TouchableOpacity>
-    )
+    );
   }
 
   render() {
@@ -78,7 +86,7 @@ class DiscoveryRow extends Component {
           horizontal={true}
         />
       </View>
-    )
+    );
   }
 }
 
@@ -103,6 +111,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center"
   }
-})
+});
 
-export default DiscoveryRow
+export default DiscoveryRow;

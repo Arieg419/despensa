@@ -17,6 +17,7 @@
     "react-native-vector-icons": "^4.1.1",
     "react-navigation": "^1.0.0-beta.9",
     "react-redux": "^5.0.4",
+    "reactotron-react-native": "^1.12.3",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0"
   },

@@ -1,12 +1,20 @@
-import React from 'react';
-import { TouchableHighlight, Text, View } from 'react-native';
+import React from "react";
+import { TouchableHighlight, Text, View } from "react-native";
 
-const ToggleButton = (props) => {
+const ToggleButton = props => {
   return (
     <TouchableHighlight onPress={props.onPress} style={{ flex: 0.5 }}>
-      <View style={[styles.viewStyle, props.selected ? styles.viewSelectedStyle : {}]}>
+      <View
+        style={[
+          styles.viewStyle,
+          props.selected ? styles.viewSelectedStyle : {}
+        ]}
+      >
         <Text
-        style={[styles.textStyle, props.selected ? styles.textSelectedStyle : {}]}
+          style={[
+            styles.textStyle,
+            props.selected ? styles.textSelectedStyle : {}
+          ]}
         >
           {props.children}
         </Text>
@@ -17,29 +25,30 @@ const ToggleButton = (props) => {
 
 const styles = {
   buttonStyle: {
-    alignSelf: 'stretch'
+    alignSelf: "stretch"
   },
   textStyle: {
-    alignSelf: 'center',
-    color: 'white',
+    alignSelf: "center",
+    color: "#bb4467",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
     paddingTop: 10,
     paddingBottom: 10,
-    textAlign: 'center'
+    textAlign: "center"
   },
   textSelectedStyle: {
-    color: '#bb4467',
+    color: "white"
   },
   viewSelectedStyle: {
-    backgroundColor: 'white',
+    backgroundColor: "#6B7794",
+    color: "#fff",
     borderBottomWidth: 2,
-    borderBottomColor: '#bb4467'
+    borderBottomColor: "#bb4467"
   },
   viewStyle: {
-    backgroundColor: '#6B7794',
+    backgroundColor: "white",
     borderBottomWidth: 2,
-    borderBottomColor: '#6B7794'
+    borderBottomColor: "#6B7794"
   }
 };
 

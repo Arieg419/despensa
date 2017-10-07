@@ -1,25 +1,31 @@
-import Expo from "expo"
-import React from "react"
-import { StyleSheet, Text, View, Platform } from "react-native"
-import { TabNavigator, DrawerNavigator, StackNavigator } from "react-navigation"
-import { Provider } from "react-redux"
-import "./Config/ReactotronConfig"
-import store from "./store"
-import AuthScreen from "./screens/AuthScreen"
-import WelcomeScreen from "./screens/WelcomeScreen"
-import DiscoverScreen from "./screens/DiscoverScreen"
-import DiscoverCategoriesScreen from "./screens/DiscoverCategoriesScreen"
-import DiscoverCategoryScreen from "./screens/DiscoverCategoryScreen"
-import DiscoverRecipeScreen from "./screens/DiscoverRecipeScreen"
-import ProfileScreen from "./screens/ProfileScreen"
-import AskScreen from "./screens/AskScreen"
-import FavoritesScreen from "./screens/FavoritesScreen"
-import SearchScreen from "./screens/SearchScreen"
-import ReviewScreen from "./screens/ReviewScreen"
-import AddRecipeScreen from "./screens/AddRecipeScreen"
-import DrawerMenu from "./containers/DrawerMenu"
+import Expo from "expo";
+import React from "react";
+import { StyleSheet, Text, View, Platform } from "react-native";
+import {
+  TabNavigator,
+  DrawerNavigator,
+  StackNavigator
+} from "react-navigation";
+import { Provider } from "react-redux";
+// import "./Config/ReactotronConfig";
+// import Reactotron from "reactotron-react-native";
+import store from "./store";
+import AuthScreen from "./screens/AuthScreen";
+import WelcomeScreen from "./screens/WelcomeScreen";
+import DiscoverScreen from "./screens/DiscoverScreen";
+import DiscoverCategoriesScreen from "./screens/DiscoverCategoriesScreen";
+import DiscoverCategoryScreen from "./screens/DiscoverCategoryScreen";
+import DiscoverRecipeScreen from "./screens/DiscoverRecipeScreen";
+import ProfileScreen from "./screens/ProfileScreen";
+import AskScreen from "./screens/AskScreen";
+import FavoritesScreen from "./screens/FavoritesScreen";
+import SearchScreen from "./screens/SearchScreen";
+import ReviewScreen from "./screens/ReviewScreen";
+import AddRecipeScreen from "./screens/AddRecipeScreen";
+import DrawerMenu from "./containers/DrawerMenu";
 
 class App extends React.Component {
+  componentDidMount() {}
   render() {
     const MainNavigator = DrawerNavigator(
       // welcome: { screen: WelcomeScreen },
@@ -58,7 +64,7 @@ class App extends React.Component {
       {
         contentComponent: DrawerMenu
       }
-    )
+    );
 
     return (
       <Provider store={store}>
@@ -66,7 +72,7 @@ class App extends React.Component {
           <MainNavigator />
         </View>
       </Provider>
-    )
+    );
   }
 }
 
@@ -77,6 +83,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: Platform.OS === "android" ? 24 : 0
   }
-})
+});
 
-Expo.registerRootComponent(App)
+Expo.registerRootComponent(App);
