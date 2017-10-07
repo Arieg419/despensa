@@ -19,11 +19,12 @@ const create = (baseURL = "YOURAPI") => {
   }
 
   const getRoot = () => api.get("")
-
-  return {}
+  const getRecipes = () => api.get("")
+  return {
+    getRoot,
+    getRecipes
+  }
 }
 
 // let's return back our create method as the default.
-export default {
-  create
-}
+export default create()
