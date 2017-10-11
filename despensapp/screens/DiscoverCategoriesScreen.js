@@ -57,7 +57,7 @@ class DiscoverListScreen extends Component {
                   fontWeight: "700"
                 }}
               >
-                Discover By Theme
+                {this.props.discover_categories_data.testing}
               </Text>
               <Text
                 style={{
@@ -134,8 +134,12 @@ const styles = StyleSheet.create({
   }
 });
 
+const mapStateToProps = state => {
+  return { discover_categories_data: state.discover_categories_screen };
+};
+
 const mapDispatchToProps = dispatch => ({
   discoverCategory: () => dispatch(actions.tapCategoryRequest())
 });
 
-export default connect(null, mapDispatchToProps)(DiscoverListScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(DiscoverListScreen);
