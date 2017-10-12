@@ -70,11 +70,7 @@ class DiscoverCategoryScreen extends Component {
               {this.props.discover_category.testing}
             </Text>
           </View>
-          <RecipeList
-            data={discover_recent}
-            star={this.props.discover_category.testing}
-            navigatorfunc={this.props}
-          />
+          <RecipeList data={discover_recent} navigatorfunc={this.props} />
         </ScrollView>
       </View>
     );

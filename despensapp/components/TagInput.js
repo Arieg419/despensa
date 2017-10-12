@@ -1,31 +1,29 @@
-import React, { Component } from 'react'
-import {
-  Text,
-  View,
-} from 'react-native'
-import TagInput from 'react-native-tag-input'
+import React, { Component } from "react";
+import { Text, View } from "react-native";
+import TagInput from "react-native-tag-input";
 
 class TagInputComponent extends Component {
   state = {
-    tags: [],
+    tags: []
   };
 
-  onChangeTags = (tags) => {
+  onChangeTags = tags => {
+    // changes ui of Component
     this.setState({
-      tags,
-    })
-  }
+      tags
+    });
+    // form state
+    this.props.onChangeTags(tags);
+  };
 
   render() {
     const inputProps = {
-      keyboardType: 'default',
-      // placeholder: 'Add Ingredients',
-      // autoFocus: true,
-    }
+      keyboardType: "default"
+    };
 
     return (
       <View style={{ flex: 1, margin: 10, marginTop: 30 }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
           <TagInput
             value={this.state.tags}
             onChange={this.onChangeTags}
@@ -36,8 +34,8 @@ class TagInputComponent extends Component {
           />
         </View>
       </View>
-    )
+    );
   }
 }
 
-export default TagInputComponent
+export default TagInputComponent;

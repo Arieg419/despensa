@@ -13,7 +13,6 @@ const ms = () =>
 
 export const tapCategoryRequest = (dish, navigate) => {
   return async dispatch => {
-    console.log("tapCategoryRequest dish", dish.city_name);
     dispatch({ type: TAP_CATEGORY_REQUEST });
     try {
       // TODO async call for recipe fata
