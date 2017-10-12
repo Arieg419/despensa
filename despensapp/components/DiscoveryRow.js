@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
   View,
   Text,
@@ -7,18 +7,18 @@ import {
   StyleSheet,
   FlatList,
   Image
-} from "react-native"
-import MaterialIcons from "react-native-vector-icons/MaterialIcons"
+} from "react-native";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
-import LikeButton from "./common/LikeButton"
+import LikeButton from "./common/LikeButton";
 
 class DiscoveryRow extends Component {
   static propTypes = {
     onRecipePress: PropTypes.func.isRequired
-  }
+  };
 
   onButtonPress(item) {
-    this.props.onRecipePress()
+    this.props.onRecipePress();
   }
 
   discoveryRow(item) {
@@ -64,11 +64,11 @@ class DiscoveryRow extends Component {
           <TouchableOpacity
             style={{ alignSelf: "flex-end", marginRight: 10, marginBottom: 10 }}
           >
-            <LikeButton likeDish={this.props.likeDish} />
+            <LikeButton likeRecipe={this.props.likeRecipe} recipe={item} />
           </TouchableOpacity>
         </Image>
       </TouchableOpacity>
-    )
+    );
   }
 
   render() {
@@ -82,7 +82,7 @@ class DiscoveryRow extends Component {
           horizontal={true}
         />
       </View>
-    )
+    );
   }
 }
 
@@ -107,6 +107,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center"
   }
-})
+});
 
-export default DiscoveryRow
+export default DiscoveryRow;

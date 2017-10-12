@@ -1,19 +1,20 @@
 import axios from "axios";
+import Reactotron from "reactotron-react-native";
 
-const LIKE_DISH = "like_dish";
+const FAVORITE_RECIPE = "favorite_recipe";
 
 const ms = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("ok");
-    }, 600);
+    }, 400);
   });
 
-export const likeDish = dish => {
+export const likeRecipe = recipe => {
   return async dispatch => {
     dispatch({
-      payload: dish,
-      type: LIKE_DISH
+      payload: recipe,
+      type: FAVORITE_RECIPE
     });
   };
 };

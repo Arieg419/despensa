@@ -33,10 +33,6 @@ class DiscoverScreen extends Component {
     header: null
   });
 
-  componentDidMount() {
-    console.log("actions", this.props);
-  }
-
   onRecipeTapped() {
     this.props.discoverRecipe();
   }
@@ -95,16 +91,19 @@ class DiscoverScreen extends Component {
             data={discover_trending}
             onRecipePress={this.props.discoverRecipe}
             title={"What's Trending"}
+            likeRecipe={this.props.likeRecipe}
           />
           <DiscoveryRow
             data={discover_recent}
             onRecipePress={this.props.discoverRecipe}
             title={"Recent Searches"}
+            likeRecipe={this.props.likeRecipe}
           />
           <DiscoveryRow
             data={discover_new}
             onRecipePress={this.props.discoverRecipe}
             title={"New Recipes"}
+            likeRecipe={this.props.likeRecipe}
           />
         </ScrollView>
         <TouchableOpacity style={styles.searchFAB}>
@@ -171,11 +170,15 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
-  return { discover_data: state.discover_screen };
+  return {
+    discover_data: state.discover_screen,
+    favorites_data: state.favorites_screen
+  };
 };
 
 const mapDispatchToProps = dispatch => ({
-  discoverRecipe: () => dispatch(actions.tapRecipeRequest())
+  discoverRecipe: () => dispatch(actions.tapRecipeRequest()),
+  likeRecipe: recipe => dispatch(actions.likeRecipe(recipe))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DiscoverScreen);

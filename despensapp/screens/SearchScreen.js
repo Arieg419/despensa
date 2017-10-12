@@ -116,7 +116,7 @@ class SearchScreen extends Component {
                 fontWeight: "600"
               }}
             >
-              Search by Ingredients
+              {this.props.search_data.testing}
             </Text>
           </Image>
         </View>
