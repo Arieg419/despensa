@@ -127,11 +127,18 @@ app.get("/scrape_subcategories", (req, res) => {
 
 app.get("/readjson", (req, res) => {
   const file =
-    "/Users/omergoldberg/Projects/Clones/despensa/smittenkitchen/Vegetable_Recipe_Links/Broccoli Rabe.json";
+    "/Users/omergoldberg/Projects/Clones/despensa/smittenkitchen/Vegetable_Recipe_Links/Endive.json";
   jsonfile.readFile(file, function(err, obj) {
     if (err) {
       console.log(err);
     } else {
+      // data = JSON.parse(obj);
+      // let objLen = data.length;
+      // for (let i = 0; i < objLen; i++) {
+      //   console.log("*********************\n");
+      //   console.log(data[i]);
+      // }
+      // obj = JSON.stringify(obj);
       res.send(obj);
     }
   });
