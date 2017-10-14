@@ -1,6 +1,9 @@
 import json
 from pprint import pprint
 from bs4 import BeautifulSoup
+import os
+from os import listdir
+from os.path import isfile, join
 import requests
 import re
 
@@ -66,13 +69,20 @@ def get_recipe_info(url):
                 "img": img}
     return recipe_info
 
-recipe_data = []
-with open('Cabbage.json') as data_file:
-    data = json.load(data_file)
+def create_recipe_json_file():
+    # read all files in dir to list
+    onlyfiles = [f for f in listdir(os.getcwd()) if isfile(join(os.getcwd(), f))]
+    pprint(onlyfiles)
+            # for every file in dir, create recipe json for all recipe URLS
+    # recipe_data = []
+    # with open('Cabbage.json') as data_file:
+    #     data = json.load(data_file)
+    #
+    # i = 0
+    # while i < len(data):
+    #     recipe_data.append(get_recipe_info(data[i]))
+    #     i += 1
+    #
+    # pprint(recipe_data)
 
-i = 0
-while i < len(data):
-    recipe_data.append(get_recipe_info(data[i]))
-    i += 1
-
-pprint(recipe_data)
+create_recipe_json_file()
