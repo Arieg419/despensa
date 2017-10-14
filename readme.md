@@ -3,7 +3,7 @@
 Despensa is a mobile application built in React Native. It allows you to search for recipes based on ingredients available in your home.
 
 ## What's left
-The UI is pretty much done. Currently I am scraping and cleaning all the data that will be used within the app. Redux still needs to be implemented, preferrably with mock data / API. This way when I am done cleaning the data I can just plug it in.
+The UI is pretty much done. Currently I am scraping and cleaning all the data that will be used within the app. Redux is implemented for state management. Currently focusing on data pipeline and building server to handle client side queries.
 
 ## Screens
 * [Despensa Home](#despensahome)
