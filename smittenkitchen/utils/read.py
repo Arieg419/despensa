@@ -69,15 +69,17 @@ def get_recipe_info(url):
                 "img": img}
     return recipe_info
 
-def create_recipe_json_file():
-    # read all files in dir to list
-    onlyfiles = [f for f in listdir(os.getcwd()) if isfile(join(os.getcwd(), f))]
-    pprint(onlyfiles)
-            # for every file in dir, create recipe json for all recipe URLS
-    # recipe_data = []
-    # with open('Cabbage.json') as data_file:
-    #     data = json.load(data_file)
-    #
+def get_recipes_in_file(path):
+    for file in os.listdir(path):
+        create_recipe_json_file(os.path.join(path, file))
+        break
+
+def create_recipe_json_file(file):
+    pprint(file)
+    recipe_data = []
+    with open(file) as data_file:
+        data = json.load(data_file)
+        pprint(data)
     # i = 0
     # while i < len(data):
     #     recipe_data.append(get_recipe_info(data[i]))
@@ -85,4 +87,4 @@ def create_recipe_json_file():
     #
     # pprint(recipe_data)
 
-create_recipe_json_file()
+get_recipes_in_file("../Sweets_Recipe_Links")
