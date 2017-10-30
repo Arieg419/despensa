@@ -2,8 +2,9 @@ import json
 from pprint import pprint
 from bs4 import BeautifulSoup
 import os
-from os import listdir
-from os.path import isfile, join
+from os import listdir, makedirs
+from os.path import isfile, join, basename, splitext, exists
+from urlparse import urlparse
 import requests
 import re
 
@@ -71,20 +72,28 @@ def get_recipe_info(url):
 
 def get_recipes_in_file(path):
     for file in os.listdir(path):
-        create_recipe_json_file(os.path.join(path, file))
-        break
+        create_recipe_json_file(path, os.path.join(path, file))
 
-def create_recipe_json_file(file):
-    pprint(file)
+# gets recipes in Bars.json for example
+def create_recipe_json_file(path, file):
     recipe_data = []
+    dir_name = splitext(basename(file))[0]
+    dir = os.path.join(path, dir_name)
+    if exists(dir):
+        return
+    makedirs(dir)
     with open(file) as data_file:
-        data = json.load(data_file)
-        pprint(data)
-    # i = 0
-    # while i < len(data):
-    #     recipe_data.append(get_recipe_info(data[i]))
-    #     i += 1
-    #
-    # pprint(recipe_data)
+        file_contents = json.load(data_file)
+        i = 0
+        while i < len(file_contents):
+            recipe_path = urlparse(file_contents[i]).path
+            recipe_file_name = filter(bool, recipe_path.split("/"))
+            recipe_file_name = recipe_file_name[-1] + ".json"
+            recipe_file = open(os.path.join(dir, recipe_file_name), "w")
+            recipe_file.write(json.dumps(get_recipe_info(file_contents[i]), sort_keys=True, indent=2, separators=(',', ': ')))
+            i += 1
 
-get_recipes_in_file("../Sweets_Recipe_Links")
+# get_recipes_in_file("../Sweets_Recipe_Links")
+# get_recipes_in_file("../Vegetable_Recipe_Links")
+# get_recipes_in_file("../Fruit_Recipe_Links")
+get_recipes_in_file("../General_Recipe_Links")
