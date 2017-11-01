@@ -22,6 +22,7 @@ import {
 import Reactotron from "reactotron-react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import TagInputComponent from "../components/TagInput";
+import DishType from "../components/DishType";
 
 class SearchScreen extends Component {
   constructor(props) {
@@ -120,11 +121,25 @@ class SearchScreen extends Component {
             </Text>
           </Image>
         </View>
-        <TagInputComponent
-          style={{ margin: 10 }}
-          onChangeTags={this.onUpdateRecipeIngredients}
-          inputProps={{ placeholder: "Add Ingredients", autoFocus: false }}
-        />
+        <View style={{ flex: 1, justifyContent: "center", marginTop: 10 }}>
+          <Text
+            style={{
+              color: "black",
+              fontSize: 14,
+              justifyContent: "center",
+              alignSelf: "center"
+            }}
+          >
+            Select a Dish Type
+          </Text>
+          <DishType />
+          <TagInputComponent
+            style={{ margin: 10 }}
+            value={["General", "Vegetable", "Sweet", "Fruit"]}
+            onChangeTags={this.onUpdateRecipeIngredients}
+            inputProps={{ autoFocus: false }}
+          />
+        </View>
         <View
           style={{
             flex: 1,
@@ -200,3 +215,9 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchScreen);
+
+// <TagInputComponent
+//   style={{ margin: 10 }}
+//   onChangeTags={this.onUpdateRecipeIngredients}
+//   inputProps={{ placeholder: "Add Ingredients", autoFocus: false }}
+// />

@@ -4,15 +4,13 @@ import TagInput from "react-native-tag-input";
 
 class TagInputComponent extends Component {
   state = {
-    tags: []
+    tags: this.props.value
   };
 
   onChangeTags = tags => {
-    // changes ui of Component
     this.setState({
       tags
     });
-    // form state
     this.props.onChangeTags(tags);
   };
 
@@ -22,7 +20,7 @@ class TagInputComponent extends Component {
     };
 
     return (
-      <View style={{ flex: 1, margin: 10, marginTop: 30 }}>
+      <View style={{ flex: 1, margin: 10, marginTop: 5 }}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <TagInput
             value={this.state.tags}

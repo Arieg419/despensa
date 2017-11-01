@@ -1,10 +1,11 @@
-import Expo from "expo"
-import React from "react"
-import { StyleSheet, Text, View, Platform } from "react-native"
-import Navigation from "./Navigation/AppNavigation"
-import { Provider } from "react-redux"
-import "./Config/ReactotronConfig"
-import store from "./store"
+import Expo from "expo";
+import "expo";
+import React from "react";
+import { StyleSheet, Text, View, Platform } from "react-native";
+import Navigation from "./Navigation/AppNavigation";
+import { Provider } from "react-redux";
+import "./Config/ReactotronConfig";
+import store from "./store";
 
 class App extends React.Component {
   componentDidMount() {}
@@ -15,7 +16,7 @@ class App extends React.Component {
           <Navigation />
         </View>
       </Provider>
-    )
+    );
   }
 }
 
@@ -26,6 +27,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: Platform.OS === "android" ? 24 : 0
   }
-})
+});
 
-Expo.registerRootComponent(App)
+Expo.registerRootComponent(App);
