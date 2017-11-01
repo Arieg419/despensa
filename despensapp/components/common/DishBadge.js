@@ -5,18 +5,18 @@ import { Badge } from "react-native-elements";
 class DishBadge extends Component {
   state = {
     selected: false,
-    bgColor: { backgroundColor: "violet" }
+    bgColor: { backgroundColor: "skyblue" }
   };
   badgeBGColor() {
     if (this.state.selected) {
       this.setState({
         selected: !this.state.selected,
-        bgColor: { backgroundColor: "skyblue" }
+        bgColor: { backgroundColor: "rgba(126, 192, 238, 0.4)" }
       });
     } else {
       this.setState({
         selected: !this.state.selected,
-        bgColor: { backgroundColor: "violet" }
+        bgColor: { backgroundColor: "skyblue" }
       });
     }
   }
@@ -43,7 +43,7 @@ const style = StyleSheet.create({
     marginTop: 10
   },
   badgeText: {
-    fontSize: 10,
+    fontSize: 11,
     color: "#fff"
   }
 });

@@ -22,7 +22,8 @@ import {
 import Reactotron from "reactotron-react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import TagInputComponent from "../components/TagInput";
-import DishType from "../components/DishType";
+import SelectDishType from "../components/DishType";
+import SelectIngredientType from "../components/IngredientType";
 
 class SearchScreen extends Component {
   constructor(props) {
@@ -122,50 +123,10 @@ class SearchScreen extends Component {
           </Image>
         </View>
         <View style={{ flex: 1, justifyContent: "center", marginTop: 10 }}>
-          <Text
-            style={{
-              color: "black",
-              fontSize: 14,
-              justifyContent: "center",
-              alignSelf: "center"
-            }}
-          >
-            Select a Dish Type
-          </Text>
-          <DishType />
-          <TagInputComponent
-            style={{ margin: 10 }}
-            value={["General", "Vegetable", "Sweet", "Fruit"]}
-            onChangeTags={this.onUpdateRecipeIngredients}
-            inputProps={{ autoFocus: false }}
-          />
+          <SelectDishType />
+          <SelectIngredientType />
         </View>
-        <View
-          style={{
-            flex: 1,
-            alignItems: "stretch",
-            justifyContent: "center",
-            margin: 10
-          }}
-        >
-          <Slider
-            value={this.state.sliderValue}
-            onValueChange={sliderValue => this.setState({ sliderValue })}
-            minimumValue={0}
-            maximumValue={120}
-          />
-          <Text>
-            Cooking Time: {Math.floor(this.state.sliderValue)} minutes
-          </Text>
-        </View>
-        <View style={{ marginTop: 20 }}>
-          <ButtonGroup
-            textStyle={{ fontSize: 13 }}
-            onPress={this.onUpdateRecipeDifficulty}
-            selectedIndex={recipeDifficulty}
-            buttons={buttons}
-          />
-        </View>
+
         <Button
           onPress={this.onSubmit}
           buttonStyle={{

@@ -9,18 +9,30 @@ class DishType extends Component {
   };
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          flexDirection: "row",
-          margin: 10,
-          marginTop: 5,
-          justifyContent: "space-between"
-        }}
-      >
-        {this.state.dishTypes.map((type, idx) => (
-          <DishBadge type={type} key={idx} />
-        ))}
+      <View>
+        <Text
+          style={{
+            color: "black",
+            fontSize: 18,
+            justifyContent: "center",
+            alignSelf: "center"
+          }}
+        >
+          Select a Dish Type
+        </Text>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: "row",
+            margin: 10,
+            marginTop: 5,
+            justifyContent: "space-between"
+          }}
+        >
+          {this.state.dishTypes.map((type, idx) => (
+            <DishBadge type={type} key={idx} />
+          ))}
+        </View>
       </View>
     );
   }
