@@ -24,9 +24,13 @@ class IngredientType extends Component {
         </Text>
         <TagInputComponent
           style={{ margin: 10 }}
+          text="Hello world"
           value={["General", "Vegetable", "Sweet", "Fruit"]}
           onChangeTags={this.onUpdateRecipeIngredients}
-          inputProps={{ autoFocus: false }}
+          inputProps={{
+            autoFocus: false,
+            placeholder: "List your ingredients"
+          }}
         />
       </View>
     );

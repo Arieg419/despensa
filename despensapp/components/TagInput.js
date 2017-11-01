@@ -4,7 +4,7 @@ import TagInput from "react-native-tag-input";
 
 class TagInputComponent extends Component {
   state = {
-    tags: this.props.value
+    tags: []
   };
 
   onChangeTags = tags => {
