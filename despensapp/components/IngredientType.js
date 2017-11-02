@@ -8,6 +8,7 @@ class IngredientType extends Component {
   };
   onUpdateRecipeIngredients = tags => {
     this.setState({ recipeIngredients: tags });
+    this.props.handler(tags);
   };
   render() {
     return (

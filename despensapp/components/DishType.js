@@ -33,15 +33,12 @@ class DishType extends Component {
           }}
         >
           {this.props.dishTypes.map((type, idx) => (
-            <TouchableHighlight onPress={() => this.onDishTypeChange} key={idx}>
-              <View>
-                <DishBadge
-                  type={type}
-                  handler={this.onDishTypeChange}
-                  idx={idx}
-                />
-              </View>
-            </TouchableHighlight>
+            <DishBadge
+              type={type}
+              handler={this.onDishTypeChange}
+              idx={idx}
+              key={idx}
+            />
           ))}
         </View>
       </View>

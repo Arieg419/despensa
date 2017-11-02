@@ -4,19 +4,19 @@ import { Badge } from "react-native-elements";
 
 class DishBadge extends Component {
   state = {
-    selected: false,
-    bgColor: { backgroundColor: "skyblue" }
+    selected: true,
+    bgColor: { backgroundColor: "rgba(126, 192, 238, 0.4)" }
   };
   badgeBGColor() {
     if (this.state.selected) {
       this.setState({
         selected: !this.state.selected,
-        bgColor: { backgroundColor: "rgba(126, 192, 238, 0.4)" }
+        bgColor: { backgroundColor: "skyblue" }
       });
     } else {
       this.setState({
         selected: !this.state.selected,
-        bgColor: { backgroundColor: "skyblue" }
+        bgColor: { backgroundColor: "rgba(126, 192, 238, 0.4)" }
       });
     }
     this.props.handler(this.props.idx, this.props.type);

@@ -74,16 +74,18 @@ class SearchScreen extends Component {
 
   onUpdateDishType = dishTypes => {
     this.setState({ dishTypes });
-    Reactotron.log(this.state);
   };
 
   onUpdateMultiSelect = multiSelected => {
     this.setState({ multiSelected });
-    Reactotron.log(this.state);
+  };
+
+  onUpdateIngredients = recipeIngredients => {
+    this.setState({ recipeIngredients });
   };
 
   onSubmit = () => {
-    Reactotron.log(this.state);
+    console.log(this.state);
     this.props.search({ recipe: "hot dog" });
   };
 
@@ -126,8 +128,11 @@ class SearchScreen extends Component {
             handler={this.onUpdateDishType}
             dishTypes={this.state.dishTypes}
           />
-          <MultiSelectPicker handler={this.onUpdateMultiSelect} />
-          <SelectIngredientType />
+          <MultiSelectPicker
+            handler={this.onUpdateMultiSelect}
+            dishTypes={this.state.dishTypes}
+          />
+          <SelectIngredientType handler={this.onUpdateIngredients} />
         </View>
 
         <Button
