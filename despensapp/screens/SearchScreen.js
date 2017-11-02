@@ -24,21 +24,21 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 import TagInputComponent from "../components/TagInput";
 import SelectDishType from "../components/DishType";
 import SelectIngredientType from "../components/IngredientType";
+import MultiSelectPicker from "../components/MultiSelectPicker";
 
 class SearchScreen extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      recipeIngredients: [],
-      recipeDifficulty: 0,
-      sliderValue: 0
-    };
-
-    this.onUpdateRecipeIngredients = this.onUpdateRecipeIngredients.bind(this);
-    this.onUpdateRecipeDifficulty = this.onUpdateRecipeDifficulty.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-  }
+  state = {
+    recipeIngredients: [],
+    recipeDifficulty: 0,
+    dishTypes: [
+      { name: "General", status: false },
+      { name: "Vegetable", status: false },
+      { name: "Sweet", status: false },
+      { name: "Fruit", status: false }
+    ],
+    multiSelected: [],
+    dishes_you_like: []
+  };
 
   static navigationOptions = ({ navigation }) => ({
     drawerLabel: "Search",
@@ -72,23 +72,22 @@ class SearchScreen extends Component {
     )
   });
 
-  onUpdateRecipeIngredients(tags) {
-    this.setState({ tags });
-  }
+  onUpdateDishType = dishTypes => {
+    this.setState({ dishTypes });
+    Reactotron.log(this.state);
+  };
 
-  onUpdateRecipeDifficulty(recipeDifficulty) {
-    this.setState({ recipeDifficulty });
-  }
+  onUpdateMultiSelect = multiSelected => {
+    this.setState({ multiSelected });
+    Reactotron.log(this.state);
+  };
 
-  onSubmit() {
+  onSubmit = () => {
     Reactotron.log(this.state);
     this.props.search({ recipe: "hot dog" });
-  }
+  };
 
   render() {
-    const buttons = ["Easy", "Everything"];
-    const { recipeDifficulty } = this.state;
-
     return (
       <ScrollView
         style={{ backgroundColor: "white" }}
@@ -123,7 +122,11 @@ class SearchScreen extends Component {
           </Image>
         </View>
         <View style={{ flex: 1, justifyContent: "center", marginTop: 10 }}>
-          <SelectDishType />
+          <SelectDishType
+            handler={this.onUpdateDishType}
+            dishTypes={this.state.dishTypes}
+          />
+          <MultiSelectPicker handler={this.onUpdateMultiSelect} />
           <SelectIngredientType />
         </View>
 
@@ -176,9 +179,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchScreen);
-
-// <TagInputComponent
-//   style={{ margin: 10 }}
-//   onChangeTags={this.onUpdateRecipeIngredients}
-//   inputProps={{ placeholder: "Add Ingredients", autoFocus: false }}
-// />

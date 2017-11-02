@@ -19,18 +19,15 @@ class DishBadge extends Component {
         bgColor: { backgroundColor: "skyblue" }
       });
     }
+    this.props.handler(this.props.idx, this.props.type);
   }
   render() {
     return (
-      <Badge containerStyle={[style.badge, this.state.bgColor]}>
-        <Text
-          style={style.badgeText}
-          onPress={() => {
-            this.badgeBGColor();
-          }}
-        >
-          {this.props.type}
-        </Text>
+      <Badge
+        containerStyle={[style.badge, this.state.bgColor]}
+        onPress={() => this.badgeBGColor()}
+      >
+        <Text style={style.badgeText}>{this.props.type.name}</Text>
       </Badge>
     );
   }

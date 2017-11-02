@@ -37,6 +37,4 @@ class IngredientType extends Component {
   }
 }
 
-const style = StyleSheet.create({});
-
 export default IngredientType;

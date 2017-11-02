@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, TouchableHighlight } from "react-native";
+import Reactotron from "reactotron-react-native";
 import { Badge } from "react-native-elements";
 import DishBadge from "./common/DishBadge";
 
 class DishType extends Component {
-  state = {
-    dishTypes: ["General", "Vegetable", "Sweet", "Fruit"]
+  onDishTypeChange = (idx, type) => {
+    newDishTypes = this.props.dishTypes;
+    newDishTypes[idx]["status"] = !type.status;
+    this.props.handler(newDishTypes);
   };
   render() {
     return (
@@ -29,8 +32,16 @@ class DishType extends Component {
             justifyContent: "space-between"
           }}
         >
-          {this.state.dishTypes.map((type, idx) => (
-            <DishBadge type={type} key={idx} />
+          {this.props.dishTypes.map((type, idx) => (
+            <TouchableHighlight onPress={() => this.onDishTypeChange} key={idx}>
+              <View>
+                <DishBadge
+                  type={type}
+                  handler={this.onDishTypeChange}
+                  idx={idx}
+                />
+              </View>
+            </TouchableHighlight>
           ))}
         </View>
       </View>
