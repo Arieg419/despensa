@@ -29,7 +29,6 @@ import MultiSelectPicker from "../components/MultiSelectPicker";
 class SearchScreen extends Component {
   state = {
     recipeIngredients: [],
-    recipeDifficulty: 0,
     dishTypes: [
       { name: "General", status: false },
       { name: "Vegetable", status: false },
@@ -85,8 +84,11 @@ class SearchScreen extends Component {
   };
 
   onSubmit = () => {
-    console.log(this.state);
-    this.props.search({ recipe: "hot dog" });
+    // TODO this will be filtered used in search algo
+    // const dishTypes = this.state.dishTypes.filter(dish => {
+    //   return dish.status;
+    // });
+    this.props.search({ recipe: this.state });
   };
 
   render() {

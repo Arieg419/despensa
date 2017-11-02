@@ -16,6 +16,7 @@ const ms = query =>
 export const search = query => {
   return async dispatch => {
     dispatch({ type: SEARCH_RECIPE_REQUEST });
+    Reactotron.log(query);
     try {
       const res = await ms(query);
       if (res.type === "ok") {

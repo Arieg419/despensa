@@ -61,7 +61,6 @@ class MultiSelectPicker extends Component {
       ];
     }
     for (let dishType of dishTypes) {
-      Reactotron.log(dishType);
       if (dishType.name === "General") {
         this.items.push(...generalItems);
       } else if (dishType.name === "Vegetable") {
