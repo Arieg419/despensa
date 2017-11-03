@@ -84,9 +84,6 @@ class SearchScreen extends Component {
   };
 
   onSubmit = () => {
-    // const dishTypes = this.state.dishTypes.filter(dish => {
-    //   return dish.status;
-    // });
     this.props.search({ recipe: this.state });
     this.props.navigation.navigate("searchresult");
   };

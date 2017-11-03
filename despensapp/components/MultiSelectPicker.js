@@ -31,7 +31,7 @@ vegegatbleItems = vegetableDishes.map((dish, idx) => {
 generalItems = generalDishes.map((dish, idx) => {
   return {
     name: dish,
-    id: dish
+    id: idx
   };
 });
 

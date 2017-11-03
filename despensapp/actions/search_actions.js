@@ -15,12 +15,61 @@ const SEARCH_RECIPE_FAILURE = "SEARCH_RECIPE_FAILURE";
 const name = "Bars";
 const path_name = `../data/Sweet_Recipes/Bars/merged_file.json`;
 
-const fetchRecipe = query =>
+const getRecipeCategory = category => {
+  switch (category) {
+    case "General":
+      return fetchGeneralRecipes();
+    case "Vegetable":
+      return fetchVegetableRecipes();
+    case "Sweet":
+      return fetchSweetRecipes();
+    default:
+      return fetchFruitRecipes();
+  }
+};
+
+const fetchRecipe = ({ recipe }) =>
   new Promise((resolve, reject) => {
-    Reactotron.log(fetchVegetableRecipes());
-    setTimeout(() => {
-      resolve({ ...query, type: "ok", result: "data" });
-    }, 200);
+    // Get All Recipes for Category
+    const recipeIngredients = recipe.recipeIngredients;
+    const dishTypes = recipe.dishTypes.filter(dish => {
+      return dish.status;
+    });
+    let recipes = getRecipeCategory(dishTypes[0].name);
+
+    // Filter Recipes by Dish
+    const selectedDishes = recipe.multiSelected;
+    recipes = recipes.filter(recipe => {
+      for (let selectedDish of selectedDishes) {
+        if (selectedDish in recipe) {
+          return true;
+        }
+      }
+      return false;
+    });
+
+    // Get Ingredients in Liked Dish
+    let search_results = [];
+    for (let recipe of recipes) {
+      for (let selectedDish of selectedDishes) {
+        // ['Cookie', 'Chocolate',...]
+        if (selectedDish in recipe) {
+          // { Cookie: [...cookieRecipes] }
+          for (let singular_recipe of recipe[selectedDish]) {
+            // [...cookieRecipes]
+            for (let ingredient of recipeIngredients) {
+              if (singular_recipe.tags.includes(ingredient)) {
+                Reactotron.log("victory!!!!!");
+                search_results.push(singular_recipe);
+              }
+            }
+          }
+        }
+      }
+    }
+    Reactotron.log(search_results);
+
+    resolve({ ...recipe, type: "ok", result: "data" });
   });
 
 export const search = query => {
