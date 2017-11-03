@@ -44,7 +44,11 @@ class MultiSelectPicker extends Component {
 
   onSelectedItemsChange = selectedItems => {
     this.setState({ selectedItems });
-    this.props.handler(selectedItems);
+    let selectedDishes = [];
+    for (let idx of selectedItems) {
+      selectedDishes.push(this.items[idx].name);
+    }
+    this.props.handler(selectedDishes);
   };
 
   getMenuOptions = () => {

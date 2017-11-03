@@ -84,11 +84,11 @@ class SearchScreen extends Component {
   };
 
   onSubmit = () => {
-    // TODO this will be filtered used in search algo
     // const dishTypes = this.state.dishTypes.filter(dish => {
     //   return dish.status;
     // });
     this.props.search({ recipe: this.state });
+    this.props.navigation.navigate("searchresult");
   };
 
   render() {
