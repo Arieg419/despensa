@@ -52,14 +52,10 @@ const fetchRecipe = ({ recipe }) =>
     let search_results = [];
     for (let recipe of recipes) {
       for (let selectedDish of selectedDishes) {
-        // ['Cookie', 'Chocolate',...]
         if (selectedDish in recipe) {
-          // { Cookie: [...cookieRecipes] }
           for (let singular_recipe of recipe[selectedDish]) {
-            // [...cookieRecipes]
             for (let ingredient of recipeIngredients) {
               if (singular_recipe.tags.includes(ingredient)) {
-                Reactotron.log("victory!!!!!");
                 search_results.push(singular_recipe);
               }
             }
@@ -67,9 +63,7 @@ const fetchRecipe = ({ recipe }) =>
         }
       }
     }
-    Reactotron.log(search_results);
-
-    resolve({ ...recipe, type: "ok", result: "data" });
+    resolve({ ...recipe, type: "ok", results: search_results });
   });
 
 export const search = query => {

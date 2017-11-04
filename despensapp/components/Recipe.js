@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, Image, ScrollView, Linking } from "react-native";
+import Reactotron from "reactotron-react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Card, CardSection, Spinner, Button } from "./common";
 import ToggleButton from "./ToggleButton";
@@ -32,7 +33,7 @@ class Recipe extends Component {
     });
   }
 
-  renderList() {
+  renderList(ingredientsList, directions) {
     if (this.state.showIngredients) {
       return this.renderIngredientList(ingredientsList);
     }
@@ -51,17 +52,22 @@ class Recipe extends Component {
   }
 
   render() {
-    const title = "Broccoli Dejour";
-    console.log("img is dis", this.props.img);
+    Reactotron.log(this.props);
     return (
       <ScrollView>
         <Card style={{ flex: 1 }}>
-          <CardSection style={{ justifyContent: "center" }}>
-            <Image
-              source={require("../assets/img/fruit_lemon.jpg")}
-              style={styles.backdrop}
-            />
-          </CardSection>
+          <Image
+            source={{ uri: this.props.img }}
+            style={{
+              width: 350,
+              height: 250,
+              margin: 5,
+              justifyContent: "center",
+              alignItems: "center",
+              alignSelf: "center"
+            }}
+            resizeMode="stretch"
+          />
           <View style={styles.toggleContainer}>
             <ToggleButton
               onPress={() => this.setState({ showIngredients: true })}
@@ -76,7 +82,9 @@ class Recipe extends Component {
               Directions
             </ToggleButton>
           </View>
-          <View style={{ flex: 1 }}>{this.renderList()}</View>
+          <View style={{ flex: 1 }}>
+            {this.renderList(this.props.ingredientList, this.props.directions)}
+          </View>
         </Card>
       </ScrollView>
     );

@@ -19,7 +19,6 @@ export const tapCategoryRequest = (dish, navigate) => {
       const res = await ms();
       if (res === "ok") {
         // TODO navigation method call here
-        console.log("tapCategoryRequest() fired...");
         dispatch(tapCategorySuccess(res));
         // navigate("discoverrecipe", {
         //   routeNaming: dish.city_name

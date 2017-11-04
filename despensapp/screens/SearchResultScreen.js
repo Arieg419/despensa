@@ -45,11 +45,16 @@ class SearchResultScreen extends Component {
   });
 
   render() {
-    // Reactotron.log(this.props.search_result);
-    return (
+    return this.props.search_result === undefined ||
+      this.props.search_result.data === undefined ? (
+      <Text>Loading...</Text>
+    ) : (
       <View style={styles.parentcontainer}>
         <ScrollView style={{ flex: 1 }}>
-          <RecipeList data={discover_recent} navigatorfunc={this.props} />
+          <RecipeList
+            data={this.props.search_result.data.results}
+            navigatorfunc={this.props}
+          />
         </ScrollView>
       </View>
     );

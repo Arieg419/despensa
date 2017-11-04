@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
+import Reactotron from "reactotron-react-native";
+import Icon from "react-native-vector-icons/MaterialIcons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-
 import Recipe from "../components/Recipe";
 
 class DiscoverRecipeScreen extends Component {
@@ -22,13 +23,36 @@ class DiscoverRecipeScreen extends Component {
           }}
         />
       </TouchableOpacity>
+    ),
+    headerLeft: (
+      <TouchableOpacity style={{ marginLeft: 5 }}>
+        <Icon
+          name="arrow-back"
+          size={26}
+          color="#757575"
+          onPress={() => {
+            navigation.navigate("searchresult");
+          }}
+        />
+      </TouchableOpacity>
     )
   });
 
   render() {
+    const {
+      img,
+      ingredient_list,
+      tags,
+      directions
+    } = this.props.navigation.state.params.params;
     return (
       <View>
-        <Recipe img={this.props.navigation.state.params["img"]} />
+        <Recipe
+          img={img}
+          ingredientList={ingredient_list}
+          directions={directions}
+          tags={tags}
+        />
       </View>
     );
   }

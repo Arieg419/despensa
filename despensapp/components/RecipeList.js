@@ -7,22 +7,24 @@ import {
   FlatList,
   Image
 } from "react-native";
+import Reactotron from "reactotron-react-native";
 import { Card, ListItem, Button } from "react-native-elements";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import moment from "moment";
 
 class RecipeListRow extends Component {
   recipeItem(item) {
-    // TODO routeName will be plucked from recipe
     return (
       <TouchableOpacity
         onPress={() => {
           this.props.navigatorfunc.navigation.navigate("discoverrecipe", {
-            routeNaming: "Rasperry Pie"
+            routeNaming: item.title,
+            params: item
           });
         }}
       >
         <Image
-          source={item.img}
+          source={{ uri: item.img }}
           style={{
             width: 350,
             height: 250,
@@ -41,7 +43,7 @@ class RecipeListRow extends Component {
               fontSize: 24
             }}
           >
-            {item.city_name}
+            {item.title}
           </Text>
           <Text
             style={{
@@ -51,7 +53,7 @@ class RecipeListRow extends Component {
               fontSize: 14
             }}
           >
-            {item.date_from} - {item.date_to}
+            {item.date}
           </Text>
         </Image>
       </TouchableOpacity>
@@ -80,3 +82,4 @@ const styles = StyleSheet.create({
 });
 
 export default RecipeListRow;
+// {moment.utc(item.date, "YYYY-MM-DD HH")}
