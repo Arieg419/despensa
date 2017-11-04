@@ -1,7 +1,4 @@
-export default function(
-  state = { testing: "discover_screen_reducer" },
-  action
-) {
+export default function(state = { testing: "smitten kitchen" }, action) {
   switch (action.type) {
     case "FETCH_HOMEPAGE":
       return { data: action.payload };

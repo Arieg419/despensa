@@ -5,9 +5,6 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { Card, CardSection, Spinner, Button } from "./common";
 import ToggleButton from "./ToggleButton";
 
-// get mock data
-import { ingredientsList, directions, notes } from "../data/recipe";
-
 class Recipe extends Component {
   state = { showIngredients: true, showBugModal: false };
 

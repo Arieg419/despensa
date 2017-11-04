@@ -6,37 +6,44 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Recipe from "../components/Recipe";
 
 class DiscoverRecipeScreen extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    headerTitle: (
-      <Text style={{ fontSize: 20 }}>
-        {navigation.state.params["routeNaming"]}
-      </Text>
-    ),
-    headerRight: (
-      <TouchableOpacity style={{ marginRight: 20 }}>
-        <MaterialIcons
-          name="reorder"
-          size={26}
-          color="#ff585b"
-          onPress={() => {
-            navigation.navigate("DrawerOpen");
-          }}
-        />
-      </TouchableOpacity>
-    ),
-    headerLeft: (
-      <TouchableOpacity style={{ marginLeft: 5 }}>
-        <Icon
-          name="arrow-back"
-          size={26}
-          color="#757575"
-          onPress={() => {
-            navigation.navigate("searchresult");
-          }}
-        />
-      </TouchableOpacity>
-    )
-  });
+  static navigationOptions = ({ navigation }) => {
+    Reactotron.log(navigation.state.params.params);
+    let backRoute = "searchresult";
+    if ("back" in navigation.state.params.params) {
+      backRoute = "discoverscreen";
+    }
+    return {
+      headerTitle: (
+        <Text style={{ fontSize: 20 }}>
+          {navigation.state.params["routeNaming"]}
+        </Text>
+      ),
+      headerRight: (
+        <TouchableOpacity style={{ marginRight: 20 }}>
+          <MaterialIcons
+            name="reorder"
+            size={26}
+            color="#ff585b"
+            onPress={() => {
+              navigation.navigate("DrawerOpen");
+            }}
+          />
+        </TouchableOpacity>
+      ),
+      headerLeft: (
+        <TouchableOpacity style={{ marginLeft: 5 }}>
+          <Icon
+            name="arrow-back"
+            size={26}
+            color="#757575"
+            onPress={() => {
+              navigation.navigate(backRoute);
+            }}
+          />
+        </TouchableOpacity>
+      )
+    };
+  };
 
   render() {
     const {

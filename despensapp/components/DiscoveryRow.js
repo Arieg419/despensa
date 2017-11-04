@@ -9,23 +9,22 @@ import {
   Image
 } from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-
+import Reactotron from "reactotron-react-native";
 import LikeButton from "./common/LikeButton";
 
 class DiscoveryRow extends Component {
-  static propTypes = {
-    onRecipePress: PropTypes.func.isRequired
-  };
-
-  onButtonPress(item) {
-    this.props.onRecipePress();
-  }
-
   discoveryRow(item) {
     return (
-      <TouchableOpacity onPress={item => this.onButtonPress(item)}>
+      <TouchableOpacity
+        onPress={() => {
+          this.props.navigation.navigate("discoverrecipe", {
+            routeNaming: item.title,
+            params: { ...item, back: "Main" }
+          });
+        }}
+      >
         <Image
-          source={item.img}
+          source={{ uri: item.img }}
           resizeMode="stretch"
           style={styles.recentlySearchedItem}
         >
@@ -48,7 +47,7 @@ class DiscoveryRow extends Component {
                 fontWeight: "700"
               }}
             >
-              {item.city_name}
+              {item.title}
             </Text>
             <Text
               style={{
@@ -58,7 +57,7 @@ class DiscoveryRow extends Component {
                 fontWeight: "600"
               }}
             >
-              {item.date_from} - {item.date_to}
+              {item.date}
             </Text>
           </View>
           <TouchableOpacity
@@ -78,7 +77,7 @@ class DiscoveryRow extends Component {
         <FlatList
           data={this.props.data}
           renderItem={({ item }) => this.discoveryRow(item)}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.key}
           horizontal={true}
         />
       </View>

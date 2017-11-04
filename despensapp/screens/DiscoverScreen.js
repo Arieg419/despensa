@@ -11,6 +11,7 @@ import {
   Image,
   Platform
 } from "react-native";
+import Reactotron from "reactotron-react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import { Button } from "react-native-elements";
 import * as actions from "../actions";
@@ -90,18 +91,21 @@ class DiscoverScreen extends Component {
           <DiscoveryRow
             data={discover_trending}
             onRecipePress={this.props.discoverRecipe}
+            navigation={this.props.navigation}
             title={"What's Trending"}
             likeRecipe={this.props.likeRecipe}
           />
           <DiscoveryRow
             data={discover_recent}
             onRecipePress={this.props.discoverRecipe}
+            navigation={this.props.navigation}
             title={"Recent Searches"}
             likeRecipe={this.props.likeRecipe}
           />
           <DiscoveryRow
             data={discover_new}
             onRecipePress={this.props.discoverRecipe}
+            navigation={this.props.navigation}
             title={"New Recipes"}
             likeRecipe={this.props.likeRecipe}
           />
@@ -177,7 +181,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  discoverRecipe: () => dispatch(actions.tapRecipeRequest()),
+  discoverRecipe: item => dispatch(actions.tapRecipeRequest(item)),
   likeRecipe: recipe => dispatch(actions.likeRecipe(recipe))
 });
 
