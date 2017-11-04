@@ -7,7 +7,6 @@ import Recipe from "../components/Recipe";
 
 class DiscoverRecipeScreen extends Component {
   static navigationOptions = ({ navigation }) => {
-    Reactotron.log(navigation.state.params.params);
     let backRoute = "searchresult";
     if ("back" in navigation.state.params.params) {
       backRoute = "discoverscreen";

@@ -3,15 +3,12 @@ const FAVORITES = "favorites";
 const FAVORITE_RECIPE = "favorite_recipe";
 import Reactotron from "reactotron-react-native";
 
-export default function(
-  state = { testing: "favorites_screen_reducer" },
-  action
-) {
+export default function(state = {}, action) {
   switch (action.type) {
     case FAVORITES:
-      return { data: action.payload };
+      return [action.payload];
     case FAVORITE_RECIPE:
-      return { ...state, [action.payload.city_name]: action.payload };
+      return [...state, action.payload];
     default:
       return state;
   }

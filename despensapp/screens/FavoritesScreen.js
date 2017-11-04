@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, Text, ListView, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity
+} from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import { connect } from "react-redux";
 import Container from "../components/common/Container";
@@ -7,68 +14,98 @@ import CustomText from "../components/common/Text";
 import ThumbSingleItem from "../components/common/SingleItem";
 import ThumbMultipleItems from "../components/common/MultipleItems";
 import items from "../data/saved";
+import Icon from "react-native-vector-icons/MaterialIcons";
 import Reactotron from "reactotron-react-native";
 
 class FavoritesScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-    drawerLabel: "Inbox",
+    drawerLabel: "Favorites",
     drawerIcon: ({ tintColor }) => (
-      <MaterialIcons name="mail" size={24} style={{ color: tintColor }} />
+      <Icon name="search" size={24} style={{ color: tintColor }} />
+    ),
+    headerLeft: (
+      <TouchableOpacity style={{ marginLeft: 5 }}>
+        <Icon
+          name="arrow-back"
+          size={26}
+          color="#757575"
+          onPress={() => {
+            navigation.navigate("discoverscreen");
+          }}
+        />
+      </TouchableOpacity>
     )
   });
 
-  constructor(props) {
-    super(props);
-    const ds = new ListView.DataSource({
-      rowHasChanged: (r1, r2) => r1 !== r2
-    });
-    this.state = {
-      dataSource: ds.cloneWithRows(items)
-    };
-  }
+  renderRow = ({ item }) => {
+    return (
+      <TouchableOpacity
+        onPress={() => {
+          this.props.navigation.navigate("discoverrecipe", {
+            routeNaming: item.title,
+            params: { ...item, back: "Main" }
+          });
+        }}
+      >
+        <Image
+          source={{ uri: item.img }}
+          resizeMode="stretch"
+          style={styles.recentlySearchedItem}
+        >
+          <View>
+            <Text
+              style={{
+                backgroundColor: "rgba(0,0,0,0)",
+                color: "#fff",
+                fontSize: 30,
+                fontWeight: "700"
+              }}
+            />
+          </View>
+          <View>
+            <Text
+              style={{
+                backgroundColor: "rgba(0,0,0,0)",
+                color: "#fff",
+                fontSize: 30,
+                fontWeight: "700"
+              }}
+            >
+              {item.title}
+            </Text>
+            <Text
+              style={{
+                backgroundColor: "rgba(0,0,0,0)",
+                color: "#fff",
+                fontSize: 14,
+                fontWeight: "600"
+              }}
+            >
+              {item.date}
+            </Text>
+          </View>
+          <TouchableOpacity
+            style={{ alignSelf: "flex-end", marginRight: 10, marginBottom: 10 }}
+          />
+        </Image>
+      </TouchableOpacity>
+    );
+  };
 
   render() {
-    Reactotron.log(this.props.favorites_data);
     return (
-      <Container>
-        <ListView
-          style={styles.holder}
-          renderHeader={() => (
-            <Text style={styles.screenTitle} type="h1">
-              {this.props.favorites_data.testing}
-            </Text>
-          )}
-          enableEmptySections={true}
-          dataSource={this.state.dataSource}
-          renderRow={this.renderRow}
-          removeClippedSubviews={false}
+      <View>
+        <Text style={styles.screenTitle} type="h1">
+          Favorites
+        </Text>
+        <FlatList
+          data={this.props.favorites_data}
+          renderItem={item => this.renderRow(item)}
+          keyExtractor={item => item.key}
         />
-      </Container>
+      </View>
     );
   }
-
-  renderRow = rowData => {
-    if (rowData.thumbs.length >= 3) {
-      let thumbs = rowData.thumbs;
-      let formatData = {
-        name: rowData.name,
-        bigImageUri: thumbs[0]["uri"],
-        smallTopImageUri: thumbs[1]["uri"],
-        smallBottomImageUri: thumbs[2]["uri"],
-        description: rowData.description
-      };
-      return <ThumbMultipleItems data={formatData} />;
-    } else {
-      let thumb = rowData.thumbs[0];
-      let formatData = {
-        name: rowData.name,
-        description: rowData.description,
-        thumb: thumb.uri,
-        ratio: thumb.ratio
-      };
-      return <ThumbSingleItem data={formatData} />;
-    }
-  };
 }
 
 const styles = StyleSheet.create({
@@ -81,6 +118,14 @@ const styles = StyleSheet.create({
   holder: {
     paddingHorizontal: 25,
     flex: 1
+  },
+  recentlySearchedItem: {
+    width: 330,
+    height: 220,
+    margin: 5,
+    marginBottom: 30,
+    justifyContent: "space-between",
+    alignItems: "center"
   }
 });
 

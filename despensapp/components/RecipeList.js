@@ -82,4 +82,3 @@ const styles = StyleSheet.create({
 });
 
 export default RecipeListRow;
-// {moment.utc(item.date, "YYYY-MM-DD HH")}

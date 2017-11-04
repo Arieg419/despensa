@@ -11,6 +11,7 @@ const ms = () =>
   });
 
 export const likeRecipe = recipe => {
+  // Reactotron.log(recipe);
   return async dispatch => {
     dispatch({
       payload: recipe,
